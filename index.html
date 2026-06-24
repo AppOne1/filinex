@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
@@ -144,7 +145,7 @@
         .btn-primary { background: var(--primary-color); color: white; border: none; padding: 11px 20px; border-radius: 12px; font-weight: 700; cursor: pointer; display: flex; align-items: center; gap: 8px; font-size: 0.95rem; }
         .btn-primary:hover { opacity: 0.9; }
 
-        .data-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 20px; }
+        .data-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 15px; }
         .data-card { border-radius: 16px; overflow: hidden; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.01); display: flex; flex-direction: column; position: relative; border: 2px solid var(--border-light); background: var(--card-bg-light); color: var(--text-light); }
         body.dark-mode .data-card { border-color: var(--border-dark); background: var(--card-bg-dark); color: var(--text-dark); }
         
@@ -353,7 +354,57 @@ body.dark-mode .agent-row { background: var(--sidebar-bg-dark); border-color: va
     .print-table { width: 100%; border-collapse: collapse; margin-top: 15px; }
     .print-table th, .print-table td { border: 1px solid #000; padding: 10px; text-align: right; }
 }
-    </style>
+    
+        /* استایل اختصاصی آیکون‌های مشکی بدون پس‌زمینه (گزینه ۵) */
+        .data-card .card-actions button i, 
+        .data-card .card-footer button i,
+        .data-card .action-btn i,
+        .data-card .btn-icon i {
+            color: #000000 !important;
+            background: none !important;
+            transition: color 0.2s ease, transform 0.2s ease;
+        }
+        .data-card .card-actions button:hover i, 
+        .data-card .card-footer button:hover i,
+        .data-card .action-btn:hover i,
+        .data-card .btn-icon:hover i {
+            color: var(--primary-color, #3b82f6) !important;
+            transform: scale(1.15);
+        }
+        .data-card button.btn-danger:hover i, .data-card .btn-delete:hover i {
+            color: #ef4444 !important;
+        }
+        .data-card.status-inactive .card-actions button i,
+        .data-card.archived .card-actions button i {
+            color: #ffffff !important;
+        }
+
+
+        /* استایل اختصاصی آیکون‌های مشکی بدون پس‌زمینه (گزینه ۵) */
+        .data-card .card-actions button i, 
+        .data-card .card-footer button i,
+        .data-card .action-btn i,
+        .data-card .btn-icon i {
+            color: #000000 !important;
+            background: none !important;
+            transition: color 0.2s ease, transform 0.2s ease;
+        }
+        .data-card .card-actions button:hover i, 
+        .data-card .card-footer button:hover i,
+        .data-card .action-btn:hover i,
+        .data-card .btn-icon:hover i {
+            color: var(--primary-color, #3b82f6) !important;
+            transform: scale(1.15);
+        }
+        .data-card button.btn-danger:hover i, .data-card .btn-delete:hover i {
+            color: #ef4444 !important;
+        }
+        .data-card.status-inactive .card-actions button i,
+        .data-card.archived .card-actions button i {
+            color: #ffffff !important;
+        }
+
+</style>
 </head>
 <body>
 
@@ -1041,7 +1092,7 @@ body.dark-mode .agent-row { background: var(--sidebar-bg-dark); border-color: va
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn-secondary" onclick="App.closeModal('commissionCalc')">بستن</button>
-                <button type="button" class="btn-primary" onclick="App.saveCommissionAsTransaction()"><i class="fa-solid fa-money-bill-transfer"></i> ثبت به عنوان تراکنش</button>
+                
             </div>
         </div>
     </div>
@@ -3150,48 +3201,5 @@ body.dark-mode .agent-row { background: var(--sidebar-bg-dark); border-color: va
     </script>
 
     <script>
-    // ===== قفل امنیتی نرم‌افزار (ضد کپی پایه) =====
-    // نکته: این قفل‌ها کاربران عادی را باز می‌دارد اما ۱۰۰٪ امن نیستند
-    (function() {
-        // فعال‌سازی فقط در محیط production (نه localhost)
-        const isLocalhost = location.hostname === 'localhost' || location.hostname === '127.0.0.1' || location.protocol === 'file:';
-        
-        function attachSecurity() {
-            // مسدودسازی راست‌کلیک
-            document.addEventListener('contextmenu', function(e) {
-                // اجازه به فیلدهای متنی برای کپی/پیست معمولی
-                if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
-                e.preventDefault();
-            });
-
-            // مسدودسازی کلیدهای میانبر DevTools
-            document.addEventListener('keydown', function(e) {
-                // F12
-                if (e.keyCode === 123) { e.preventDefault(); return false; }
-                // Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+Shift+C
-                if (e.ctrlKey && e.shiftKey && (e.keyCode === 73 || e.keyCode === 74 || e.keyCode === 67)) {
-                    e.preventDefault(); return false;
-                }
-                // Ctrl+U (مشاهده سورس)
-                if (e.ctrlKey && e.keyCode === 85) { e.preventDefault(); return false; }
-            });
-        }
-
-        // قفل را با کمی تاخیر فعال می‌کنیم تا با راه‌اندازی تداخل نکند
-        if (document.readyState === 'complete') {
-            attachSecurity();
-        } else {
-            window.addEventListener('load', attachSecurity);
-        }
-
-        // هدایت خودکار به حالت امن در صورت بروز خطای دیتابیس
-        window.addEventListener('unhandledrejection', function(event) {
-            if (event.reason && event.reason.toString().includes('transaction')) {
-                console.error("خطای دسترسی به دیتابیس مهار شد:", event.reason);
-                event.preventDefault();
-            }
-        });
-    })();
-    </script>
 </body>
 </html>
