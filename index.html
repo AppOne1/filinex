@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="theme-color" content="#3b82f6">
-    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <meta name="apple-mobile-web-app-title" content="فایلینکس">
     <title>فایلینکس - سیستم مدیریت املاک حرفه‌ای</title>
@@ -121,25 +121,6 @@ body.dark-mode .filter-number{background:var(--card-bg-dark);border-color:var(--
 .data-card{border-radius:14px;overflow:visible;box-shadow:0 2px 6px rgba(0,0,0,.04);display:flex;flex-direction:column;position:relative;border:2px solid var(--border-light);background:var(--card-bg-light);color:var(--text-light)}
 body.dark-mode .data-card{border-color:var(--border-dark);background:var(--card-bg-dark);color:var(--text-dark)}
 
-.status-badge-container{position:absolute;top:10px;left:10px;z-index:10;display:flex;align-items:center;gap:5px;padding:4px 10px 4px 8px;border-radius:20px;font-size:.68rem;font-weight:800;backdrop-filter:blur(8px);cursor:pointer;transition:all .2s ease;border:1px solid transparent}
-.status-badge-container:hover{transform:scale(1.08)}
-.status-badge-container .status-dot{width:8px;height:8px;border-radius:50%;position:relative;flex-shrink:0}
-.status-badge-container .status-dot::after{content:'';position:absolute;inset:-3px;border-radius:50%;animation:statusPulse 2s ease-in-out infinite}
-.status-badge-container.stt-active{background:rgba(16,185,129,.12);color:#059669;border-color:rgba(16,185,129,.25)}
-.status-badge-container.stt-active .status-dot{background:#10b981}
-.status-badge-container.stt-active .status-dot::after{background:rgba(16,185,129,.35)}
-.status-badge-container.stt-inactive{background:rgba(239,68,68,.12);color:#ef4444;border-color:rgba(239,68,68,.25)}
-.status-badge-container.stt-inactive .status-dot{background:#ef4444}
-.status-badge-container.stt-inactive .status-dot::after{background:rgba(239,68,68,.35)}
-.status-badge-container.stt-review{background:rgba(245,158,11,.12);color:#d97706;border-color:rgba(245,158,11,.25)}
-.status-badge-container.stt-review .status-dot{background:#f59e0b}
-.status-badge-container.stt-review .status-dot::after{background:rgba(245,158,11,.35)}
-@keyframes statusPulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0;transform:scale(2.2)}}
-.status-badge-container .status-menu-popup{display:none;position:absolute;top:calc(100% + 6px);left:0;background:var(--card-bg-light);border:1px solid var(--border-light);border-radius:10px;box-shadow:0 8px 24px rgba(0,0,0,.15);overflow:hidden;z-index:50;min-width:130px}
-body.dark-mode .status-badge-container .status-menu-popup{background:var(--card-bg-dark);border-color:var(--border-dark)}
-.status-badge-container .status-menu-popup button{display:flex;align-items:center;gap:6px;padding:8px 12px;border:none;background:none;cursor:pointer;font-size:.78rem;font-weight:700;width:100%;white-space:nowrap;color:inherit}
-.status-badge-container .status-menu-popup button:hover{background:rgba(59,130,246,.08)}
-
 .status-text-label{font-size:.72rem;font-weight:800;margin-right:6px;white-space:nowrap;display:inline-flex;align-items:center;gap:3px}
 .stt-active{color:#10b981}
 .stt-inactive{color:#ef4444}
@@ -163,10 +144,6 @@ body.dark-mode .card-meta{color:#94a3b8}
 .card-desc{font-size:.8rem;line-height:1.5;color:#475569;margin-bottom:10px}
 body.dark-mode .card-desc{color:#94a3b8}
 
-.colleague-info-box{display:flex;align-items:center;gap:8px;padding:8px 10px;background:linear-gradient(135deg,rgba(245,158,11,.06),rgba(234,179,8,.04));border:1px solid rgba(245,158,11,.2);border-radius:8px;margin-bottom:8px;font-size:.75rem;font-weight:700;color:#92400e}
-body.dark-mode .colleague-info-box{color:#fbbf24;background:rgba(245,158,11,.08);border-color:rgba(245,158,11,.2)}
-.colleague-info-box i{color:#f59e0b;font-size:.85rem}
-
 .card-footer-actions{padding:8px 12px;background:rgba(0,0,0,.02);border-top:1px solid var(--border-light);display:flex;justify-content:flex-end;gap:5px;align-items:center;flex-wrap:wrap}
 body.dark-mode .card-footer-actions{background:rgba(255,255,255,.01);border-color:var(--border-dark)}
 .btn-icon{width:32px;height:32px;border-radius:7px;border:1px solid var(--border-light);background:var(--card-bg-light);cursor:pointer;color:#374151!important;display:flex;align-items:center;justify-content:center;font-size:.85rem;position:relative}
@@ -184,8 +161,6 @@ body.dark-mode .btn-icon{background:var(--card-bg-dark);border-color:var(--borde
 .btn-icon.btn-alarm{background:rgba(245,158,11,.1)!important;color:#d97706!important;border-color:rgba(245,158,11,.3)!important}
 .btn-icon.btn-alarm:hover{background:#f59e0b!important;color:#fff!important}
 .btn-icon.btn-alarm.has-alarm{animation:alarmGlow 2s infinite}
-.btn-icon.btn-share{background:rgba(59,130,246,.08)!important;color:#3b82f6!important;border-color:rgba(59,130,246,.2)!important}
-.btn-icon.btn-share:hover{background:#3b82f6!important;color:#fff!important}
 @keyframes alarmGlow{0%,100%{box-shadow:0 0 0 0 rgba(239,68,68,0)}50%{box-shadow:0 0 8px 3px rgba(239,68,68,.5)}}
 .img-count-badge{position:absolute;top:8px;left:8px;background:rgba(0,0,0,.7);color:#fff;font-size:.65rem;padding:2px 6px;border-radius:8px;display:flex;align-items:center;gap:3px;font-weight:700;z-index:5}
 
@@ -499,7 +474,7 @@ body.dark-mode .device-id-value{background:rgba(255,255,255,.05)}
         <div class="dashboard-card" style="max-width:600px;margin-top:18px">
             <div class="card-header">🔑 فعال‌سازی لایسنس پرو</div>
             <div style="display:flex;gap:8px;margin-top:8px"><input type="text" class="form-control" id="proLicenseKey" placeholder="کد لایسنس دریافتی از پشتیبانی"><button class="btn-primary" onclick="App.activateProLicense()">فعال‌سازی</button></div>
-            <p style="font-size:.75rem;color:#64748b;margin-top:6px">کد لایسنس اختصاصی خود را که از پشتیبانی دریافت کرده‌اید وارد کنید.</p>
+            <p style="font-size:.75rem;color:#64748b;margin-top:6px">کد لایسنس اختصاصی خود را که از پشتیبانی دریافت کرده‌اید وارد کنید. با فعال‌سازی، محدودیت ۵ ثبت رایگان برداشته می‌شود.</p>
         </div>
         <div class="dashboard-card" style="max-width:600px;margin-top:18px">
             <div class="card-header">💾 پشتیبان‌گیری و بازیابی</div>
@@ -689,7 +664,7 @@ body.dark-mode .device-id-value{background:rgba(255,255,255,.05)}
 <p>فایلینکس یک راهکار جامع، مستقل و مدرن برای مدیریت، کارشناسی و اتوماسیون فرآیندهای آژانس‌های املاک و مشاورین حرفه‌ای مسکن است.</p>
 <p><strong>گام اول ما، پایداری، سرعت و امنیت داده‌های شماست.</strong></p>
 <hr style="margin:12px 0;border:none;border-top:1px solid var(--border-light)">
-<p style="text-align:center;color:#64748b;font-size:.8rem">نسخه ۲.۲ | © ۱۴۰۵ - <strong>فایلینکس</strong><br>پشتیبانی: 09155304248 | alavinia.sh@gmail.com</p></div></div></div>
+<p style="text-align:center;color:#64748b;font-size:.8rem">نسخه ۲.۱ | © ۱۴۰۵ - <strong>فایلینکس</strong><br>پشتیبانی: 09155304248 | alavinia.sh@gmail.com</p></div></div></div>
 
 <div class="lightbox-overlay" id="lightboxOverlay"><button class="lightbox-close" onclick="App.closeLightbox()"><i class="fa-solid fa-xmark"></i></button><button class="lightbox-nav lightbox-prev" onclick="App.navigateLightbox(-1)"><i class="fa-solid fa-chevron-right"></i></button><img class="lightbox-img" id="lightboxImage" src=""><button class="lightbox-nav lightbox-next" onclick="App.navigateLightbox(1)"><i class="fa-solid fa-chevron-left"></i></button><div class="lightbox-counter" id="lightboxCounter"></div></div>
 
@@ -713,621 +688,303 @@ body.dark-mode .device-id-value{background:rgba(255,255,255,.05)}
 <div class="ios-pwa-toast" id="iosPwaToast"><i class="fa-solid fa-share" style="font-size:16px"></i><span>برای نصب: Share → Add to Home Screen</span></div>
 
 <script>
-/* =============================================================
-   فایلینکس - کد کامل و نهایی بدون خطا
-   تمام مشکلات رفع شده:
-   1. ترتیب تعریف App اصلاح شد
-   2. سازگاری با file:// و http://
-   3. فرم ورود با preventDefault
-   4. متاتگ اصلاح شده
-   ============================================================= */
+let db;const DB_NAME='FilelinxDB';const DB_VERSION=2;
+function initDB(){return new Promise((resolve,reject)=>{const req=indexedDB.open(DB_NAME,DB_VERSION);req.onupgradeneeded=e=>{const d=e.target.result;['settings','config','properties','requests','bankCards','transactions','crmLogs','reminders','agents'].forEach(s=>{if(!d.objectStoreNames.contains(s))d.createObjectStore(s,{keyPath:'id',autoIncrement:true})})};req.onsuccess=e=>resolve(e.target.result);req.onerror=()=>reject('DB Error')})}
 
-// ===== سیستم ذخیره‌سازی سازگار =====
-var _useLS = location.protocol === 'file:';
-var _LS_KEY = 'flx_db_';
-var _storeCache = {};
-
-function _lsLoad(sn) {
-    if (!_storeCache[sn]) {
-        try { var r = localStorage.getItem(_LS_KEY + sn); _storeCache[sn] = r ? JSON.parse(r) : []; }
-        catch (e) { _storeCache[sn] = []; }
-    }
-    return _storeCache[sn];
-}
-function _lsSave(sn) {
-    try { localStorage.setItem(_LS_KEY + sn, JSON.stringify(_storeCache[sn] || [])); } catch (e) {}
-}
-function _lsNextId(sn) {
-    var items = _lsLoad(sn);
-    if (items.length === 0) return 1;
-    return Math.max.apply(null, items.map(function(i) { return i.id || 0; })) + 1;
-}
-
-var db;
-var DB_NAME = 'FilelinxDB';
-var DB_VERSION = 2;
-
-function initDB() {
-    if (_useLS) return Promise.resolve('ls');
-    return new Promise(function(resolve) {
-        try {
-            var req = indexedDB.open(DB_NAME, DB_VERSION);
-            req.onupgradeneeded = function(e) {
-                var d = e.target.result;
-                ['settings', 'config', 'properties', 'requests', 'bankCards', 'transactions', 'crmLogs', 'reminders', 'agents'].forEach(function(s) {
-                    if (!d.objectStoreNames.contains(s)) d.createObjectStore(s, { keyPath: 'id', autoIncrement: true });
-                });
-            };
-            req.onsuccess = function(e) { resolve(e.target.result); };
-            req.onerror = function() { _useLS = true; resolve('ls'); };
-        } catch (e) { _useLS = true; resolve('ls'); }
-    });
-}
-
-var dbOps = {
-    getAll: function(s) {
-        return new Promise(function(r) {
-            if (_useLS) return r(_lsLoad(s));
-            try {
-                var tx = db.transaction(s, 'readonly');
-                tx.objectStore(s).getAll().onsuccess = function(e) { r(e.target.result || []); };
-                tx.onerror = function() { r(_lsLoad(s)); };
-            } catch (e) { r(_lsLoad(s)); }
-        });
-    },
-    get: function(s, id) {
-        return new Promise(function(r) {
-            if (_useLS) { var items = _lsLoad(s); return r(items.find(function(i) { return i.id === id; }) || null); }
-            try {
-                var tx = db.transaction(s, 'readonly');
-                tx.objectStore(s).get(id).onsuccess = function(e) { r(e.target.result); };
-                tx.onerror = function() { r(null); };
-            } catch (e) { r(null); }
-        });
-    },
-    add: function(s, d) {
-        return new Promise(function(r) {
-            if (_useLS) { var items = _lsLoad(s); d.id = _lsNextId(s); items.push(d); _lsSave(s); return r(d.id); }
-            try {
-                var tx = db.transaction(s, 'readwrite');
-                var req = tx.objectStore(s).add(d);
-                req.onsuccess = function() {
-                    if (typeof App !== 'undefined' && App._backupStore) App._backupStore(s);
-                    r(req.result);
-                };
-                tx.onerror = function() { var items = _lsLoad(s); d.id = _lsNextId(s); items.push(d); _lsSave(s); r(d.id); };
-            } catch (e) { var items = _lsLoad(s); d.id = _lsNextId(s); items.push(d); _lsSave(s); r(d.id); }
-        });
-    },
-    put: function(s, d) {
-        return new Promise(function(r) {
-            if (_useLS) { var items = _lsLoad(s); var idx = -1; for (var i = 0; i < items.length; i++) { if (items[i].id === d.id) { idx = i; break; } } if (idx >= 0) items[idx] = d; else items.push(d); _lsSave(s); return r(true); }
-            try {
-                var tx = db.transaction(s, 'readwrite');
-                tx.objectStore(s).put(d).onsuccess = function() {
-                    if (typeof App !== 'undefined' && App._backupStore) App._backupStore(s);
-                    r(true);
-                };
-                tx.onerror = function() { r(true); };
-            } catch (e) { r(true); }
-        });
-    },
-    del: function(s, id) {
-        return new Promise(function(r) {
-            if (_useLS) { _storeCache[s] = _lsLoad(s).filter(function(i) { return i.id !== id; }); _lsSave(s); return r(true); }
-            try {
-                var tx = db.transaction(s, 'readwrite');
-                tx.objectStore(s).delete(id).onsuccess = function() {
-                    if (typeof App !== 'undefined' && App._backupStore) App._backupStore(s);
-                    r(true);
-                };
-                tx.onerror = function() { r(true); };
-            } catch (e) { r(true); }
-        });
-    },
-    clear: function(s) {
-        return new Promise(function(r) {
-            if (_useLS) { _storeCache[s] = []; _lsSave(s); return r(true); }
-            try {
-                var tx = db.transaction(s, 'readwrite');
-                tx.objectStore(s).clear().onsuccess = function() { r(true); };
-            } catch (e) { r(true); }
-        });
-    }
+const dbOps={
+getAll:s=>new Promise(r=>{const tx=db.transaction(s,'readonly');tx.objectStore(s).getAll().onsuccess=e=>r(e.target.result||[])}),
+get:(s,id)=>new Promise(r=>{const tx=db.transaction(s,'readonly');tx.objectStore(s).get(id).onsuccess=e=>r(e.target.result)}),
+add:(s,d)=>new Promise(r=>{const tx=db.transaction(s,'readwrite');const req=tx.objectStore(s).add(d);req.onsuccess=()=>r(req.result)}),
+put:(s,d)=>new Promise(r=>{const tx=db.transaction(s,'readwrite');tx.objectStore(s).put(d).onsuccess=()=>r(true)}),
+del:(s,id)=>new Promise(r=>{const tx=db.transaction(s,'readwrite');tx.objectStore(s).delete(id).onsuccess=()=>r(true)}),
+clear:s=>new Promise(r=>{const tx=db.transaction(s,'readwrite');tx.objectStore(s).clear().onsuccess=()=>r(true)})
 };
 
-var BACKUP_STORES = ['properties', 'requests', 'bankCards', 'transactions', 'crmLogs', 'config', 'settings', 'agents', 'reminders'];
-
-// ===== MoneyHelper =====
-var MoneyHelper = {
-    faToEn: function(s) { if (s == null) return ''; var fa = '۰۱۲۳۴۵۶۷۸۹', ar = '٠١٢٣٤٥٦٧٨٩'; return String(s).replace(/[۰-۹]/g, function(d) { return fa.indexOf(d); }).replace(/[٠-٩]/g, function(d) { return ar.indexOf(d); }); },
-    onlyDigits: function(s) { if (s == null) return ''; return MoneyHelper.faToEn(s).replace(/[^\d]/g, ''); },
-    format: function(num) { if (num == null || num === '' || isNaN(num)) return ''; return MoneyHelper.faToEn(String(num)).replace(/[^\d]/g, '').replace(/\B(?=(\d{3})+(?!\d))/g, ','); },
-    toNumber: function(s) { var d = MoneyHelper.onlyDigits(s); return d ? parseFloat(d) : 0; },
-    onInput: function(e) {
-        var raw = e.target.value; var digits = MoneyHelper.faToEn(raw).replace(/[^\d]/g, '');
-        if (digits === '') { e.target.value = ''; return; }
-        var f = digits.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
-        var cp = e.target.selectionStart; var ol = raw.length; e.target.value = f;
-        try { e.target.setSelectionRange(Math.max(0, cp + f.length - ol), Math.max(0, cp + f.length - ol)); } catch (err) {}
-    },
-    attach: function(id) { var el = document.getElementById(id); if (!el) return; el.setAttribute('inputmode', 'numeric'); el.setAttribute('dir', 'ltr'); el.style.textAlign = 'right'; el.addEventListener('input', MoneyHelper.onInput); }
+const MoneyHelper={
+faToEn:s=>{if(s==null)return'';const fa='۰۱۲۳۴۵۶۷۸۹',ar='٠١٢٣٤٥٦٧٨٩';return String(s).replace(/[۰-۹]/g,d=>fa.indexOf(d)).replace(/[٠-٩]/g,d=>ar.indexOf(d))},
+onlyDigits:s=>{if(s==null)return'';return MoneyHelper.faToEn(s).replace(/[^\d]/g,'')},
+format:num=>{if(num==null||num===''||isNaN(num))return'';return MoneyHelper.faToEn(String(num)).replace(/[^\d]/g,'').replace(/\B(?=(\d{3})+(?!\d))/g,',')},
+toNumber:s=>{const d=MoneyHelper.onlyDigits(s);return d?parseFloat(d):0},
+onInput:e=>{const raw=e.target.value;const digits=MoneyHelper.faToEn(raw).replace(/[^\d]/g,'');if(digits===''){e.target.value='';return}const f=digits.replace(/\B(?=(\d{3})+(?!\d))/g,',');const cp=e.target.selectionStart;const ol=raw.length;e.target.value=f;try{e.target.setSelectionRange(Math.max(0,cp+f.length-ol),Math.max(0,cp+f.length-ol))}catch(err){}},
+attach:id=>{const el=document.getElementById(id);if(!el)return;el.setAttribute('inputmode','numeric');el.setAttribute('dir','ltr');el.style.textAlign='right';el.addEventListener('input',MoneyHelper.onInput)}
 };
 
-// ===== شیء اصلی App =====
-var App = {
-    currentUser: null, currentUsername: 'admin', isPro: false, deviceId: null, chartInstance: null,
-    cache: { properties: [], requests: [], config: null }, lastCommissionResult: null, contractPropId: null,
-    lightboxImages: [], lightboxIndex: 0, _currentTheme: '', _licenseBackup: null,
-    moneyFields: ['propPrice', 'propRent', 'reqBudget', 'reqRent', 'cardBalance', 'transAmount', 'calcSaleTotal', 'calcRentAmount', 'calcDepositAmount', 'calcAgreedAmount', 'contractAgreedAmount', 'filterMinPrice', 'filterMaxPrice'],
-    settings: { agencyName: "مدیر سیستم", isProVersion: false },
+const App={
+currentUser:null,currentUsername:'admin',isPro:false,deviceId:null,chartInstance:null,
+cache:{properties:[],requests:[],config:null},lastCommissionResult:null,contractPropId:null,
+lightboxImages:[],lightboxIndex:0,
+moneyFields:['propPrice','propRent','reqBudget','reqRent','cardBalance','transAmount','calcSaleTotal','calcRentAmount','calcDepositAmount','calcAgreedAmount','contractAgreedAmount','filterMinPrice','filterMaxPrice'],
+settings:{agencyName:"مدیر سیستم",isProVersion:false},
 
-    // ===== BACKUP SYSTEM =====
-    _backupStore: function(storeName) {
-        if (_useLS) return Promise.resolve();
-        return dbOps.getAll(storeName).then(function(data) {
-            localStorage.setItem('flx_bk_' + storeName, JSON.stringify(data));
-        }).catch(function() {});
-    },
-    _backupAll: function() {
-        var self = this;
-        return BACKUP_STORES.reduce(function(p, s) { return p.then(function() { return self._backupStore(s); }); }, Promise.resolve());
-    },
+// ===== DEVICE ID & LICENSE SYSTEM v2.1 =====
+LICENSE_DURATION_MAP:{"1M":"M1","2M":"M2","3M":"M3","6M":"M6","PERM":"PX"},
+LICENSE_DURATION_DAYS:{"1M":30,"2M":60,"3M":90,"6M":180,"PERM":0},
+LICENSE_DURATION_LABELS:{"1M":"۱ ماهه","2M":"۲ ماهه","3M":"۳ ماهه","6M":"۶ ماهه","PERM":"دائمی"},
 
-    // ===== LICENSE SYSTEM =====
-    LICENSE_DURATION_MAP: { "1M": "M1", "2M": "M2", "3M": "M3", "6M": "M6", "PERM": "PX" },
-    LICENSE_DURATION_DAYS: { "1M": 30, "2M": 60, "3M": 90, "6M": 180, "PERM": 0 },
-    LICENSE_DURATION_LABELS: { "1M": "۱ ماهه", "2M": "۲ ماهه", "3M": "۳ ماهه", "6M": "۶ ماهه", "PERM": "دائمی" },
+generateDeviceId:()=>{let did=localStorage.getItem('flx_device_id');if(did)return did;const ua=navigator.userAgent;const sl=screen.width+'x'+screen.height;const tz=new Date().getTimezoneOffset();const lang=navigator.language;const canvas=document.createElement('canvas');const ctx=canvas.getContext('2d');ctx.textBaseline='top';ctx.font='14px Arial';ctx.fillText('flx',2,2);const canvasHash=canvas.toDataURL().slice(-20);const seed=ua+sl+tz+lang+canvasHash+location.hostname;let h=0x811c9dc5;for(let i=0;i<seed.length;i++){h^=seed.charCodeAt(i);h=Math.imul(h,0x01000193)}const part=Math.abs(h).toString(36).toUpperCase().padStart(8,'0');const rand=Math.random().toString(36).substr(2,4).toUpperCase();did='FLX'+part+rand;localStorage.setItem('flx_device_id',did);return did},
 
-    generateDeviceId: function() {
-        var did = localStorage.getItem('flx_device_id');
-        if (did) return did;
-        var ua = navigator.userAgent; var sl = screen.width + 'x' + screen.height;
-        var tz = new Date().getTimezoneOffset(); var lang = navigator.language;
-        var canvas = document.createElement('canvas'); var ctx = canvas.getContext('2d');
-        ctx.textBaseline = 'top'; ctx.font = '14px Arial'; ctx.fillText('flx', 2, 2);
-        var canvasHash = canvas.toDataURL().slice(-20);
-        var seed = ua + sl + tz + lang + canvasHash + location.hostname;
-        var h = 0x811c9dc5;
-        for (var i = 0; i < seed.length; i++) { h ^= seed.charCodeAt(i); h = Math.imul(h, 0x01000193); }
-        var part = Math.abs(h).toString(36).toUpperCase().padStart(8, '0');
-        var rand = Math.random().toString(36).substr(2, 4).toUpperCase();
-        did = 'FLX' + part + rand;
-        localStorage.setItem('flx_device_id', did);
-        return did;
-    },
+computeLicenseHash:(deviceId,durationCode)=>{const secret='FILELINX2026SEED';const data=deviceId+secret+durationCode;let h1=0x45C7A,h2=0x9D2C6;for(let i=0;i<data.length;i++){const c=data.charCodeAt(i);h1=((h1<<5)-h1+c*7)|0;h2=((h2<<3)+h2+c*13)|0}return{p1:Math.abs(h1).toString(36).toUpperCase().slice(-5),p2:Math.abs(h2).toString(36).toUpperCase().slice(-3)}},
 
-    computeLicenseHash: function(deviceId, durationCode) {
-        var secret = 'FILELINX2026SEED'; var data = deviceId + secret + durationCode;
-        var h1 = 0x45C7A, h2 = 0x9D2C6;
-        for (var i = 0; i < data.length; i++) { var c = data.charCodeAt(i); h1 = ((h1 << 5) - h1 + c * 7) | 0; h2 = ((h2 << 3) + h2 + c * 13) | 0; }
-        return { p1: Math.abs(h1).toString(36).toUpperCase().slice(-5), p2: Math.abs(h2).toString(36).toUpperCase().slice(-3) };
-    },
+generateLicenseForDuration:(deviceId,duration)=>{const dc=App.LICENSE_DURATION_MAP[duration];if(!dc)return null;const{p1,p2}=App.computeLicenseHash(deviceId,dc);return'FLX-'+p1+dc+p2+'-PRO'},
 
-    generateLicenseForDuration: function(deviceId, duration) {
-        var dc = App.LICENSE_DURATION_MAP[duration]; if (!dc) return null;
-        var h = App.computeLicenseHash(deviceId, dc);
-        return 'FLX-' + h.p1 + dc + h.p2 + '-PRO';
-    },
+validateLicenseCode:(deviceId,code)=>{const vip=["WANNA2026-PRO","FILELINX-VIP-MELIKA","SUPER-REAL-ESTATE-2026"];if(vip.includes(code))return{valid:true,duration:'PERM'};const durations=Object.keys(App.LICENSE_DURATION_MAP);for(const dur of durations){const expected=App.generateLicenseForDuration(deviceId,dur);if(code===expected)return{valid:true,duration:dur}}return{valid:false,duration:null}},
 
-    validateLicenseCode: function(deviceId, code) {
-        var vip = ["WANNA2026-PRO", "FILELINX-VIP-MELIKA", "SUPER-REAL-ESTATE-2026"];
-        if (vip.indexOf(code) >= 0) return { valid: true, duration: 'PERM' };
-        var durations = Object.keys(App.LICENSE_DURATION_MAP);
-        for (var i = 0; i < durations.length; i++) {
-            var expected = App.generateLicenseForDuration(deviceId, durations[i]);
-            if (code === expected) return { valid: true, duration: durations[i] };
-        }
-        return { valid: false, duration: null };
-    },
+getSystemPersianDateTime:()=>{const now=new Date();const pDate=new Intl.DateTimeFormat('fa-IR',{year:'numeric',month:'2-digit',day:'2-digit'}).format(now).replace(/[\u0660-\u0669\u06f0-\u06f9]/g,d=>d.charCodeAt(0)&0xf);const pTime=String(now.getHours()).padStart(2,'0')+':'+String(now.getMinutes()).padStart(2,'0');return{date:pDate,time:pTime}},
+getPersianMonth:()=>{const parts=new Intl.DateTimeFormat('fa-IR-u-nu-latn',{year:'numeric',month:'numeric'}).format(new Date()).split('/');return parseInt(parts[1])||1},
+getSeasonFromMonth:m=>{if(m>=1&&m<=3)return{name:'بهار',index:0};if(m>=4&&m<=6)return{name:'تابستان',index:1};if(m>=7&&m<=9)return{name:'پاییز',index:2};return{name:'زمستان',index:3}},
 
-    getSystemPersianDateTime: function() {
-        var now = new Date();
-        var pDate = new Intl.DateTimeFormat('fa-IR', { year: 'numeric', month: '2-digit', day: '2-digit' }).format(now).replace(/[\u0660-\u0669\u06f0-\u06f9]/g, function(d) { return d.charCodeAt(0) & 0xf; });
-        var pTime = String(now.getHours()).padStart(2, '0') + ':' + String(now.getMinutes()).padStart(2, '0');
-        return { date: pDate, time: pTime };
-    },
+toggleSidebar:()=>{document.getElementById('sidebar').classList.toggle('collapsed')},
+toggleFab:()=>{document.getElementById('fabOptions').classList.toggle('show')},
+toggleDarkMode:()=>{document.body.classList.toggle('dark-mode');localStorage.setItem('flx_dark',document.body.classList.contains('dark-mode'))},
+cycleTheme:()=>{const t=['','theme-space','theme-sunset'];let c=t.indexOf(App._currentTheme||'');c=(c+1)%t.length;document.body.classList.remove('theme-space','theme-sunset');if(t[c])document.body.classList.add(t[c]);App._currentTheme=t[c]},
+changeFont:f=>{document.body.classList.remove('font-sahel','font-shabnam');if(f==='sahel')document.body.classList.add('font-sahel');if(f==='shabnam')document.body.classList.add('font-shabnam');localStorage.setItem('flx_font',f)},
+showAbout:()=>App.openModal('about'),
+showRecovery:()=>{document.getElementById('loginCard').classList.remove('active');document.getElementById('recoveryCard').classList.add('active')},
+showLogin:()=>{document.getElementById('recoveryCard').classList.remove('active');document.getElementById('loginCard').classList.add('active')},
+logout:()=>{localStorage.removeItem('flx_user');location.reload()},
 
-    getPersianMonth: function() { var parts = new Intl.DateTimeFormat('fa-IR-u-nu-latn', { year: 'numeric', month: 'numeric' }).format(new Date()).split('/'); return parseInt(parts[1]) || 1; },
-    getSeasonFromMonth: function(m) { if (m >= 1 && m <= 3) return { name: 'بهار', index: 0 }; if (m >= 4 && m <= 6) return { name: 'تابستان', index: 1 }; if (m >= 7 && m <= 9) return { name: 'پاییز', index: 2 }; return { name: 'زمستان', index: 3 }; },
+refreshCache:async()=>{try{App.cache.properties=await dbOps.getAll('properties');App.cache.requests=await dbOps.getAll('requests');App.cache.config=await dbOps.get('config',1)}catch(e){}},
 
-    toggleSidebar: function() { document.getElementById('sidebar').classList.toggle('collapsed'); },
-    toggleFab: function() { document.getElementById('fabOptions').classList.toggle('show'); },
-    toggleDarkMode: function() { document.body.classList.toggle('dark-mode'); localStorage.setItem('flx_dark', document.body.classList.contains('dark-mode')); },
-    cycleTheme: function() { var t = ['', 'theme-space', 'theme-sunset']; var c = t.indexOf(App._currentTheme || ''); c = (c + 1) % t.length; document.body.classList.remove('theme-space', 'theme-sunset'); if (t[c]) document.body.classList.add(t[c]); App._currentTheme = t[c]; },
-    changeFont: function(f) { document.body.classList.remove('font-sahel', 'font-shabnam'); if (f === 'sahel') document.body.classList.add('font-sahel'); if (f === 'shabnam') document.body.classList.add('font-shabnam'); localStorage.setItem('flx_font', f); },
-    showAbout: function() { App.openModal('about'); },
-    showRecovery: function() { document.getElementById('loginCard').classList.remove('active'); document.getElementById('recoveryCard').classList.add('active'); },
-    showLogin: function() { document.getElementById('recoveryCard').classList.remove('active'); document.getElementById('loginCard').classList.add('active'); },
-    logout: function() { localStorage.removeItem('flx_user'); localStorage.removeItem('flx_username'); location.reload(); },
+toggleRentBox:dealVal=>{const rr=document.getElementById('propRentRow');if(!rr)return;if(dealVal&&(dealVal.includes('رهن')||dealVal.includes('اجاره'))){rr.style.display=''}else{rr.style.display='';if(document.getElementById('propRent'))document.getElementById('propRent').value='0'}},
+toggleReqRentFields:dealVal=>{const rr=document.getElementById('reqRentRow');if(!rr)return;if(dealVal&&(dealVal.includes('رهن')||dealVal.includes('اجاره'))){rr.style.display=''}else{rr.style.display='none';if(document.getElementById('reqRent'))document.getElementById('reqRent').value='0'}},
 
-    refreshCache: function() {
-        return Promise.all([dbOps.getAll('properties'), dbOps.getAll('requests'), dbOps.get('config', 1)])
-            .then(function(r) { App.cache.properties = r[0]; App.cache.requests = r[1]; App.cache.config = r[2]; })
-            .catch(function() {});
-    },
+openLightbox:(imgs,start)=>{App.lightboxImages=imgs||[];App.lightboxIndex=start||0;if(!App.lightboxImages.length)return;App.updateLightbox();document.getElementById('lightboxOverlay').classList.add('active')},
+closeLightbox:()=>{document.getElementById('lightboxOverlay').classList.remove('active')},
+navigateLightbox:dir=>{App.lightboxIndex+=dir;if(App.lightboxIndex<0)App.lightboxIndex=App.lightboxImages.length-1;if(App.lightboxIndex>=App.lightboxImages.length)App.lightboxIndex=0;App.updateLightbox()},
+updateLightbox:()=>{document.getElementById('lightboxImage').src=App.lightboxImages[App.lightboxIndex];document.getElementById('lightboxCounter').textContent=`${App.lightboxIndex+1} / ${App.lightboxImages.length}`},
 
-    toggleRentBox: function(dealVal) { var rr = document.getElementById('propRentRow'); if (!rr) return; if (dealVal && (dealVal.indexOf('رهن') >= 0 || dealVal.indexOf('اجاره') >= 0)) { rr.style.display = ''; } else { rr.style.display = 'none'; if (document.getElementById('propRent')) document.getElementById('propRent').value = '0'; } },
-    toggleReqRentFields: function(dealVal) { var rr = document.getElementById('reqRentRow'); if (!rr) return; if (dealVal && (dealVal.indexOf('رهن') >= 0 || dealVal.indexOf('اجاره') >= 0)) { rr.style.display = ''; } else { rr.style.display = 'none'; if (document.getElementById('reqRent')) document.getElementById('reqRent').value = '0'; } },
+playAlarmSound:type=>{let ctx;try{ctx=new(window.AudioContext||window.webkitAudioContext)();const o=ctx.createOscillator();const g=ctx.createGain();o.connect(g);g.connect(ctx.destination);switch(type){case'urgent':o.type='sawtooth';o.frequency.value=600;g.gain.value=.12;break;case'gentle':o.type='sine';o.frequency.value=523;g.gain.value=.08;break;case'melody':o.type='triangle';o.frequency.value=659;g.gain.value=.1;break;default:o.type='sine';o.frequency.value=880;g.gain.value=.15}o.start();g.gain.exponentialRampToValueAtTime(.00001,ctx.currentTime+.5);o.stop(ctx.currentTime+.55);setTimeout(()=>ctx.close(),600)}catch(e){}},
+selectAlarmSound:(btn,type)=>{document.querySelectorAll('.alarm-sound-btn').forEach(b=>{b.style.background='';b.style.color=''});btn.style.background='var(--primary)';btn.style.color='white';document.getElementById('alarmSoundType').value=type},
 
-    openLightbox: function(imgs, start) { App.lightboxImages = imgs || []; App.lightboxIndex = start || 0; if (!App.lightboxImages.length) return; App.updateLightbox(); document.getElementById('lightboxOverlay').classList.add('active'); },
-    closeLightbox: function() { document.getElementById('lightboxOverlay').classList.remove('active'); },
-    navigateLightbox: function(dir) { App.lightboxIndex += dir; if (App.lightboxIndex < 0) App.lightboxIndex = App.lightboxImages.length - 1; if (App.lightboxIndex >= App.lightboxImages.length) App.lightboxIndex = 0; App.updateLightbox(); },
-    updateLightbox: function() { document.getElementById('lightboxImage').src = App.lightboxImages[App.lightboxIndex]; document.getElementById('lightboxCounter').textContent = (App.lightboxIndex + 1) + ' / ' + App.lightboxImages.length; },
+triggerLoudAlarm:(title,desc,soundType)=>{let ctx=null;let interval=null;try{ctx=new(window.AudioContext||window.webkitAudioContext)();const play=()=>{if(!ctx||ctx.state==='closed')return;const o=ctx.createOscillator();const g=ctx.createGain();o.connect(g);g.connect(ctx.destination);switch(soundType||'classic'){case'urgent':o.type='sawtooth';o.frequency.setValueAtTime(600,ctx.currentTime);g.gain.setValueAtTime(.12,ctx.currentTime);o.start();g.gain.exponentialRampToValueAtTime(.00001,ctx.currentTime+.5);o.stop(ctx.currentTime+.55);break;case'gentle':o.type='sine';o.frequency.setValueAtTime(523,ctx.currentTime);g.gain.setValueAtTime(.08,ctx.currentTime);o.start();g.gain.exponentialRampToValueAtTime(.00001,ctx.currentTime+.8);o.stop(ctx.currentTime+.85);break;case'melody':o.type='triangle';o.frequency.setValueAtTime(659,ctx.currentTime);g.gain.setValueAtTime(.1,ctx.currentTime);o.start();g.gain.exponentialRampToValueAtTime(.00001,ctx.currentTime+.4);o.stop(ctx.currentTime+.45);break;default:o.type='sine';o.frequency.setValueAtTime(880,ctx.currentTime);g.gain.setValueAtTime(.15,ctx.currentTime);o.start();g.gain.exponentialRampToValueAtTime(.00001,ctx.currentTime+.3);o.stop(ctx.currentTime+.35)}};play();interval=setInterval(play,1000)}catch(e){}Swal.fire({title:`🔔 ${title}`,html:`<div style="text-align:right;direction:rtl;line-height:1.8"><p style="color:#ef4444;font-weight:bold;margin-bottom:8px">زمان انجام فرا رسید!</p><p>${desc||''}</p></div>`,icon:'warning',confirmButtonText:'🛑 قطع آلارم',confirmButtonColor:'#d33',allowOutsideClick:false}).then(()=>{if(interval)clearInterval(interval);if(ctx)ctx.close()})},
 
-    playAlarmSound: function(type) {
-        var ctx;
-        try {
-            ctx = new (window.AudioContext || window.webkitAudioContext)();
-            var o = ctx.createOscillator(); var g = ctx.createGain(); o.connect(g); g.connect(ctx.destination);
-            switch (type) {
-                case 'urgent': o.type = 'sawtooth'; o.frequency.value = 600; g.gain.value = .12; break;
-                case 'gentle': o.type = 'sine'; o.frequency.value = 523; g.gain.value = .08; break;
-                case 'melody': o.type = 'triangle'; o.frequency.value = 659; g.gain.value = .1; break;
-                default: o.type = 'sine'; o.frequency.value = 880; g.gain.value = .15;
-            }
-            o.start(); g.gain.exponentialRampToValueAtTime(.00001, ctx.currentTime + .5); o.stop(ctx.currentTime + .55);
-            setTimeout(function() { if (ctx.state !== 'closed') ctx.close(); }, 600);
-        } catch (e) {}
-    },
+startReminderEngine:()=>{setInterval(async()=>{const sys=App.getSystemPersianDateTime();await App.refreshCache();let all=[...(App.cache.properties||[]),...(App.cache.requests||[])];all.forEach(item=>{if(item.alarms&&Array.isArray(item.alarms)){item.alarms.forEach(a=>{if(a.date===sys.date&&a.time===sys.time&&!a.isTriggered){a.isTriggered=true;App.triggerLoudAlarm(a.title||"یادآور فایلینکس",a.description||"",a.soundType||'classic');const store=item.ownerName?'properties':'requests';dbOps.put(store,item)}})}})},60000)},
 
-    selectAlarmSound: function(btn, type) {
-        document.querySelectorAll('.alarm-sound-btn').forEach(function(b) { b.style.background = ''; b.style.color = ''; });
-        btn.style.background = 'var(--primary)'; btn.style.color = 'white';
-        document.getElementById('alarmSoundType').value = type;
-    },
+checkSeasonalAlarm:()=>{const month=App.getPersianMonth();const day=parseInt(App.getSystemPersianDateTime().date.split('/')[2])||1;const seasonStarts=[1,4,7,10];if(seasonStarts.includes(month)&&day<=15){const season=App.getSeasonFromMonth(month);const lastCheck=localStorage.getItem('flx_seasonal_alarm_'+season.index);if(lastCheck!==String(month)){localStorage.setItem('flx_seasonal_alarm_'+season.index,String(month));App.showSeasonalVATReport()}}},
 
-    triggerLoudAlarm: function(title, desc, soundType) {
-        var ctx = null; var interval = null;
-        try {
-            ctx = new (window.AudioContext || window.webkitAudioContext)();
-            var play = function() {
-                if (!ctx || ctx.state === 'closed') return;
-                var o = ctx.createOscillator(); var g = ctx.createGain(); o.connect(g); g.connect(ctx.destination);
-                switch (soundType || 'classic') {
-                    case 'urgent': o.type = 'sawtooth'; o.frequency.setValueAtTime(600, ctx.currentTime); g.gain.setValueAtTime(.12, ctx.currentTime); o.start(); g.gain.exponentialRampToValueAtTime(.00001, ctx.currentTime + .5); o.stop(ctx.currentTime + .55); break;
-                    case 'gentle': o.type = 'sine'; o.frequency.setValueAtTime(523, ctx.currentTime); g.gain.setValueAtTime(.08, ctx.currentTime); o.start(); g.gain.exponentialRampToValueAtTime(.00001, ctx.currentTime + .8); o.stop(ctx.currentTime + .85); break;
-                    case 'melody': o.type = 'triangle'; o.frequency.setValueAtTime(659, ctx.currentTime); g.gain.setValueAtTime(.1, ctx.currentTime); o.start(); g.gain.exponentialRampToValueAtTime(.00001, ctx.currentTime + .4); o.stop(ctx.currentTime + .45); break;
-                    default: o.type = 'sine'; o.frequency.setValueAtTime(880, ctx.currentTime); g.gain.setValueAtTime(.15, ctx.currentTime); o.start(); g.gain.exponentialRampToValueAtTime(.00001, ctx.currentTime + .3); o.stop(ctx.currentTime + .35);
-                }
-            };
-            play(); interval = setInterval(play, 1000);
-        } catch (e) {}
-        Swal.fire({
-            title: '🔔 ' + title,
-            html: '<div style="text-align:right;direction:rtl;line-height:1.8"><p style="color:#ef4444;font-weight:bold;margin-bottom:8px">زمان انجام فرا رسید!</p><p>' + (desc || '') + '</p></div>',
-            icon: 'warning', confirmButtonText: 'قطع آلارم', confirmButtonColor: '#d33', allowOutsideClick: false
-        }).then(function() { if (interval) clearInterval(interval); if (ctx && ctx.state !== 'closed') ctx.close(); });
-    },
+checkSavedLicense:()=>{
+    App.deviceId=App.generateDeviceId();
+    const didDisplay=document.getElementById('deviceIdDisplay');
+    if(didDisplay)didDisplay.textContent=App.deviceId;
+    const sl=localStorage.getItem('filelinx_license_status');
+    const sk=localStorage.getItem('filelinx_activated_key');
+    const duration=localStorage.getItem('filelinx_license_duration');
+    const activatedAt=parseInt(localStorage.getItem('filelinx_license_activated_at')||'0');
+    const b=document.getElementById('headerLicenseBadge');
+    if(sl==='activated_pro'&&sk){
+        const validation=App.validateLicenseCode(App.deviceId,sk);
+        if(!validation.valid){App.isPro=false;localStorage.removeItem('filelinx_license_status');localStorage.removeItem('filelinx_activated_key');localStorage.removeItem('filelinx_license_duration');localStorage.removeItem('filelinx_license_activated_at');if(b){b.innerText="نسخه رایگان";b.className="license-badge license-free"}return}
+        if(validation.duration==='PERM'||!activatedAt){App.isPro=true;const label=App.LICENSE_DURATION_LABELS[validation.duration]||'دائمی';if(b){b.innerText="پرو "+label;b.className="license-badge license-pro"}return}
+        const days=App.LICENSE_DURATION_DAYS[validation.duration]||0;
+        const expiresAt=activatedAt+(days*24*60*60*1000);
+        const now=Date.now();
+        if(now>expiresAt){App.isPro=false;localStorage.removeItem('filelinx_license_status');localStorage.removeItem('filelinx_activated_key');localStorage.removeItem('filelinx_license_duration');localStorage.removeItem('filelinx_license_activated_at');if(b){b.innerText="لایسنس منقضی شده";b.className="license-badge license-free"}Swal.fire({icon:'warning',title:'لایسنس منقضی شده',text:'لایسنس شما به پایان رسیده. لطفاً لایسنس جدید خریداری کنید.',confirmButtonText:'متوجه شدم'});return}
+        App.isPro=true;const remainingDays=Math.ceil((expiresAt-now)/(24*60*60*1000));const label=App.LICENSE_DURATION_LABELS[validation.duration]||'';if(b){b.innerText=`پرو ${label} (${remainingDays} روز)`;b.className="license-badge license-pro"}
+    }else{App.isPro=false;if(b){b.innerText="نسخه رایگان";b.className="license-badge license-free"}}
+},
 
-    startReminderEngine: function() {
-        setInterval(function() {
-            var sys = App.getSystemPersianDateTime();
-            App.refreshCache().then(function() {
-                var all = [].concat(App.cache.properties || [], App.cache.requests || []);
-                all.forEach(function(item) {
-                    if (item.alarms && Array.isArray(item.alarms)) {
-                        item.alarms.forEach(function(a) {
-                            if (a.date === sys.date && a.time === sys.time && !a.isTriggered) {
-                                a.isTriggered = true;
-                                App.triggerLoudAlarm(a.title || "یادآور فایلینکس", a.description || "", a.soundType || 'classic');
-                                var store = item.ownerName ? 'properties' : 'requests';
-                                dbOps.put(store, item);
-                            }
-                        });
-                    }
-                });
-            });
-        }, 60000);
-    },
+renderLicenseStatus:()=>{const el=document.getElementById('licenseStatusInfo');if(!el)return;const sl=localStorage.getItem('filelinx_license_status');const dur=localStorage.getItem('filelinx_license_duration');const activatedAt=parseInt(localStorage.getItem('filelinx_license_activated_at')||'0');if(!sl||sl!=='activated_pro'){el.innerHTML='<span style="color:#ef4444;font-weight:700">❌ نسخه رایگان فعال</span><br><span style="font-size:.75rem;color:#64748b">محدودیت: ۵ ملک و ۵ متقاضی</span>';return}const label=App.LICENSE_DURATION_LABELS[dur]||'نامشخص';if(dur==='PERM'){el.innerHTML=`<span style="color:#10b981;font-weight:700">✅ لایسنس ${label} فعال</span><br><span style="font-size:.75rem;color:#64748b">بدون محدودیت - بدون انقضا</span>`;return}const days=App.LICENSE_DURATION_DAYS[dur]||0;const expiresAt=activatedAt+(days*24*60*60*1000);const remainingDays=Math.max(0,Math.ceil((expiresAt-Date.now())/(24*60*60*1000)));const expiryDate=new Date(expiresAt).toLocaleDateString('fa-IR');el.innerHTML=`<span style="color:#10b981;font-weight:700">✅ لایسنس ${label} فعال</span><br><span style="font-size:.75rem;color:#64748b">اعتبار باقیمانده: <strong>${remainingDays} روز</strong> | تاریخ انقضا: ${expiryDate}</span>`},
 
-    checkSeasonalAlarm: function() {
-        var month = App.getPersianMonth(); var day = parseInt(App.getSystemPersianDateTime().date.split('/')[2]) || 1;
-        var seasonStarts = [1, 4, 7, 10];
-        if (seasonStarts.indexOf(month) >= 0 && day <= 15) {
-            var season = App.getSeasonFromMonth(month);
-            var lastCheck = localStorage.getItem('flx_seasonal_alarm_' + season.index);
-            if (lastCheck !== String(month)) { localStorage.setItem('flx_seasonal_alarm_' + season.index, String(month)); App.showSeasonalVATReport(); }
-        }
-    },
+getDefaultConfig:()=>({id:1,agencyName:'املاک فایلینکس',agencyPhone:'',agencyAddress:'',propertyTypes:['آپارتمان','ویلایی','تجاری','زمین'],dealTypes:['فروش','رهن و اجاره','پیش‌فروش'],features:['آسانسور','پارکینگ','انباری','بالکن','استخر']}),
+ensureConfig:async()=>{let cfg=await dbOps.get('config',1);if(!cfg){cfg=App.getDefaultConfig();await dbOps.put('config',cfg)}App.cache.config=cfg;return cfg},
 
-    checkSavedLicense: function() {
-        App.deviceId = App.generateDeviceId();
-        var didDisplay = document.getElementById('deviceIdDisplay');
-        if (didDisplay) didDisplay.textContent = App.deviceId;
-        var b = document.getElementById('headerLicenseBadge');
-        var sl = localStorage.getItem('filelinx_license_status');
-        var sk = localStorage.getItem('filelinx_activated_key');
-        var duration = localStorage.getItem('filelinx_license_duration');
-        var activatedAt = parseInt(localStorage.getItem('filelinx_license_activated_at') || '0');
-        if ((!sl || !sk) && App._licenseBackup) {
-            sl = App._licenseBackup.status || sl; sk = App._licenseBackup.key || sk;
-            duration = App._licenseBackup.duration || duration; activatedAt = App._licenseBackup.activatedAt || activatedAt;
-            if (sl && sk) {
-                localStorage.setItem('filelinx_license_status', sl); localStorage.setItem('filelinx_activated_key', sk);
-                localStorage.setItem('filelinx_license_duration', duration || 'PERM'); localStorage.setItem('filelinx_license_activated_at', String(activatedAt));
-            }
-        }
-        if (sl === 'activated_pro' && sk) {
-            var validation = App.validateLicenseCode(App.deviceId, sk);
-            if (!validation.valid) {
-                var vip = ["WANNA2026-PRO", "FILELINX-VIP-MELIKA", "SUPER-REAL-ESTATE-2026"];
-                if (vip.indexOf(sk) < 0) {
-                    App.isPro = false;
-                    localStorage.removeItem('filelinx_license_status'); localStorage.removeItem('filelinx_activated_key');
-                    localStorage.removeItem('filelinx_license_duration'); localStorage.removeItem('filelinx_license_activated_at');
-                    if (b) { b.innerText = "نسخه رایگان"; b.className = "license-badge license-free"; }
-                    return;
-                }
-            }
-            var dur = validation.valid ? validation.duration : (duration || 'PERM');
-            if (dur === 'PERM') { App.isPro = true; App._saveLicenseBackup('activated_pro', sk, 'PERM', activatedAt || Date.now()); if (b) { b.innerText = "پرو دائمی"; b.className = "license-badge license-pro"; } return; }
-            if (!activatedAt || activatedAt === 0) { activatedAt = Date.now(); localStorage.setItem('filelinx_license_activated_at', String(activatedAt)); }
-            var days = App.LICENSE_DURATION_DAYS[dur] || 30; var expiresAt = activatedAt + (days * 24 * 60 * 60 * 1000); var now = Date.now();
-            if (now > expiresAt) {
-                App.isPro = false;
-                localStorage.removeItem('filelinx_license_status'); localStorage.removeItem('filelinx_activated_key');
-                localStorage.removeItem('filelinx_license_duration'); localStorage.removeItem('filelinx_license_activated_at');
-                if (b) { b.innerText = "لایسنس منقضی شده"; b.className = "license-badge license-free"; }
-                Swal.fire({ icon: 'warning', title: 'لایسنس منقضی شده', text: 'لایسنس شما به پایان رسیده.', confirmButtonText: 'متوجه شدم' }); return;
-            }
-            App.isPro = true; App._saveLicenseBackup('activated_pro', sk, dur, activatedAt);
-            var remainingDays = Math.ceil((expiresAt - now) / (24 * 60 * 60 * 1000));
-            var label = App.LICENSE_DURATION_LABELS[dur] || '';
-            if (b) { b.innerText = 'پرو ' + label + ' (' + remainingDays + ' روز)'; b.className = "license-badge license-pro"; }
-        } else { App.isPro = false; if (b) { b.innerText = "نسخه رایگان"; b.className = "license-badge license-free"; } }
-    },
+renderConfigPanels:()=>{const c=App.cache.config;if(!c)return;document.getElementById('cfgAgencyName').value=c.agencyName||'';document.getElementById('cfgAgencyPhone').value=c.agencyPhone||'';document.getElementById('cfgAgencyAddress').value=c.agencyAddress||'';document.getElementById('cfgFeaturesList').innerHTML=(c.features||[]).map((f,i)=>`<div class="dynamic-list-item"><span>${f}</span><button class="btn-icon btn-delete" style="width:24px;height:24px" onclick="App.removeConfigItem('features',${i})"><i class="fa-solid fa-times"></i></button></div>`).join('')||'<span style="color:#94a3b8;font-size:.75rem">خالی</span>';document.getElementById('cfgPropTypesList').innerHTML=(c.propertyTypes||[]).map((f,i)=>`<div class="dynamic-list-item"><span>${f}</span><button class="btn-icon btn-delete" style="width:24px;height:24px" onclick="App.removeConfigItem('propertyTypes',${i})"><i class="fa-solid fa-times"></i></button></div>`).join('');document.getElementById('cfgDealTypesList').innerHTML=(c.dealTypes||[]).map((f,i)=>`<div class="dynamic-list-item"><span>${f}</span><button class="btn-icon btn-delete" style="width:24px;height:24px" onclick="App.removeConfigItem('dealTypes',${i})"><i class="fa-solid fa-times"></i></button></div>`).join('');const ft=document.getElementById('filterType');ft.innerHTML='<option value="">همه نوع ملک</option>'+(c.propertyTypes||[]).map(t=>`<option value="${t}">${t}</option>`).join('');const fd=document.getElementById('filterDeal');fd.innerHTML='<option value="">همه معاملات</option>'+(c.dealTypes||[]).map(t=>`<option value="${t}">${t}</option>`).join('');['propTypeSelect','reqTypeSelect'].forEach(id=>{const el=document.getElementById(id);if(el)el.innerHTML=(c.propertyTypes||[]).map(t=>`<option value="${t}">${t}</option>`).join('')});['propDealSelect','reqDealSelect'].forEach(id=>{const el=document.getElementById(id);if(el)el.innerHTML=(c.dealTypes||[]).map(t=>`<option value="${t}">${t}</option>`).join('')});['propFeaturesContainer','reqFeaturesContainer'].forEach(id=>{const el=document.getElementById(id);if(el)el.innerHTML=(c.features||[]).map(f=>`<input type="checkbox" class="tag-check" id="${id}_${f}" value="${f}"><label class="tag-label" for="${id}_${f}">${f}</label>`).join('')})},
 
-    _saveLicenseBackup: function(status, key, duration, activatedAt) {
-        App._licenseBackup = { status: status, key: key, duration: duration, activatedAt: activatedAt };
-        try { dbOps.put('settings', { id: 999, licenseBackup: { status: status, key: key, duration: duration, activatedAt: activatedAt } }); } catch (e) {}
-    },
+addConfigItem:async key=>{const c=App.cache.config;const im={features:'cfgNewFeature',propertyTypes:'cfgNewPropType',dealTypes:'cfgNewDealType'};const input=document.getElementById(im[key]);if(!input||!input.value.trim())return;if(!c[key])c[key]=[];c[key].push(input.value.trim());input.value='';await dbOps.put('config',c);App.renderConfigPanels()},
+removeConfigItem:async(key,i)=>{const c=App.cache.config;if(c[key]){c[key].splice(i,1);await dbOps.put('config',c)}App.renderConfigPanels()},
+saveAgencyInfo:async()=>{const c=App.cache.config;c.agencyName=document.getElementById('cfgAgencyName').value;c.agencyPhone=document.getElementById('cfgAgencyPhone').value;c.agencyAddress=document.getElementById('cfgAgencyAddress').value;await dbOps.put('config',c);document.getElementById('headerUser').textContent=c.agencyName;document.getElementById('headerAgency').textContent=c.agencyName;document.getElementById('headerPhone').textContent=c.agencyPhone;App.settings.agencyName=c.agencyName;Swal.fire({icon:'success',title:'ذخیره شد',timer:1500,showConfirmButton:false})},
 
-    renderLicenseStatus: function() {
-        var el = document.getElementById('licenseStatusInfo'); if (!el) return;
-        var sl = localStorage.getItem('filelinx_license_status'); var dur = localStorage.getItem('filelinx_license_duration');
-        var activatedAt = parseInt(localStorage.getItem('filelinx_license_activated_at') || '0');
-        if (!sl || sl !== 'activated_pro') { el.innerHTML = '<span style="color:#ef4444;font-weight:700">❌ نسخه رایگان فعال</span><br><span style="font-size:.75rem;color:#64748b">محدودیت: ۵ ملک و ۵ متقاضی</span>'; return; }
-        var label = App.LICENSE_DURATION_LABELS[dur] || 'نامشخص';
-        if (dur === 'PERM') { el.innerHTML = '<span style="color:#10b981;font-weight:700">✅ لایسنس ' + label + ' فعال</span><br><span style="font-size:.75rem;color:#64748b">بدون محدودیت - بدون انقضا</span>'; return; }
-        var days = App.LICENSE_DURATION_DAYS[dur] || 0; var expiresAt = activatedAt + (days * 24 * 60 * 60 * 1000);
-        var remainingDays = Math.max(0, Math.ceil((expiresAt - Date.now()) / (24 * 60 * 60 * 1000)));
-        var expiryDate = new Date(expiresAt).toLocaleDateString('fa-IR');
-        el.innerHTML = '<span style="color:#10b981;font-weight:700">✅ لایسنس ' + label + ' فعال</span><br><span style="font-size:.75rem;color:#64748b">اعتبار باقیمانده: <strong>' + remainingDays + ' روز</strong> | تاریخ انقضا: ' + expiryDate + '</span>';
-    },
+openModal:type=>{const m={property:'propertyModal',request:'requestModal',bankCard:'bankCardModal',transaction:'transactionModal',commissionCalc:'commissionCalcModal',crmTimeline:'crmTimelineModal',reminder:'reminderModal',floatingNote:'floatingNoteModal',about:'aboutModal',detail:'detailModal',alarm:'alarmModal',seasonalVAT:'seasonalVATModal',contract:'contractModal',searchResults:'searchResultsModal'};const el=document.getElementById(m[type]);if(el)el.classList.add('active');if(type==='transaction')App.loadBankCardsForTransaction()},
+closeModal:type=>{const m={property:'propertyModal',request:'requestModal',bankCard:'bankCardModal',transaction:'transactionModal',commissionCalc:'commissionCalcModal',crmTimeline:'crmTimelineModal',reminder:'reminderModal',floatingNote:'floatingNoteModal',about:'aboutModal',detail:'detailModal',alarm:'alarmModal',seasonalVAT:'seasonalVATModal',contract:'contractModal',searchResults:'searchResultsModal'};const el=document.getElementById(m[type]);if(el)el.classList.remove('active')},
 
-    getDefaultConfig: function() {
-        return { id: 1, agencyName: 'املاک فایلینکس', agencyPhone: '', agencyAddress: '', propertyTypes: ['آپارتمان', 'ویلایی', 'تجاری', 'زمین'], dealTypes: ['فروش', 'رهن و اجاره', 'پیش‌فروش'], features: ['آسانسور', 'پارکینگ', 'انباری', 'بالکن', 'استخر'] };
-    },
+quickAddFeature:ctx=>{const iid=ctx==='prop'?'propQuickFeature':'reqQuickFeature';const cid=ctx==='prop'?'propFeaturesContainer':'reqFeaturesContainer';const input=document.getElementById(iid);if(!input||!input.value.trim())return;const container=document.getElementById(cid);const f=input.value.trim();const ci=cid+'_'+f;if(document.getElementById(ci)){input.value='';return}const cb=document.createElement('input');cb.type='checkbox';cb.className='tag-check';cb.id=ci;cb.value=f;cb.checked=true;const lb=document.createElement('label');lb.className='tag-label';lb.htmlFor=ci;lb.textContent=f;container.appendChild(cb);container.appendChild(lb);input.value=''},
 
-    ensureConfig: function() {
-        return dbOps.get('config', 1).then(function(cfg) {
-            if (!cfg) { cfg = App.getDefaultConfig(); return dbOps.put('config', cfg).then(function() { return cfg; }); }
-            return cfg;
-        }).then(function(cfg) { App.cache.config = cfg; return cfg; });
-    },
+handlePhotoUpload:event=>{const files=event.target.files;let imgs=[];try{imgs=JSON.parse(document.getElementById('propImages').value||'[]')}catch(e){}Array.from(files).forEach(file=>{if(imgs.length>=4)return;const reader=new FileReader();reader.onload=e=>{imgs.push(e.target.result);document.getElementById('propImages').value=JSON.stringify(imgs);App.renderPhotoPreview()};reader.readAsDataURL(file)})},
+renderPhotoPreview:()=>{const container=document.getElementById('photoUploadContainer');let imgs=[];try{imgs=JSON.parse(document.getElementById('propImages').value||'[]')}catch(e){}container.innerHTML='';imgs.forEach((img,i)=>{container.innerHTML+=`<div class="photo-preview-item"><img src="${img}"><button type="button" class="photo-remove-btn" onclick="App.removePhoto(${i})"><i class="fa-solid fa-times"></i></button></div>`});if(imgs.length<4)container.innerHTML+=`<button type="button" class="photo-add-btn" onclick="document.getElementById('propPhotoInput').click()"><i class="fa-solid fa-plus"></i></button>`},
+removePhoto:i=>{let imgs=[];try{imgs=JSON.parse(document.getElementById('propImages').value||'[]')}catch(e){}imgs.splice(i,1);document.getElementById('propImages').value=JSON.stringify(imgs);App.renderPhotoPreview()},
 
-    renderConfigPanels: function() {
-        var c = App.cache.config; if (!c) return;
-        document.getElementById('cfgAgencyName').value = c.agencyName || '';
-        document.getElementById('cfgAgencyPhone').value = c.agencyPhone || '';
-        document.getElementById('cfgAgencyAddress').value = c.agencyAddress || '';
-        document.getElementById('cfgFeaturesList').innerHTML = (c.features || []).map(function(f, i) { return '<div class="dynamic-list-item"><span>' + f + '</span><button class="btn-icon btn-delete" style="width:24px;height:24px" onclick="App.removeConfigItem(\'features\',' + i + ')"><i class="fa-solid fa-times"></i></button></div>'; }).join('') || '<span style="color:#94a3b8;font-size:.75rem">خالی</span>';
-        document.getElementById('cfgPropTypesList').innerHTML = (c.propertyTypes || []).map(function(f, i) { return '<div class="dynamic-list-item"><span>' + f + '</span><button class="btn-icon btn-delete" style="width:24px;height:24px" onclick="App.removeConfigItem(\'propertyTypes\',' + i + ')"><i class="fa-solid fa-times"></i></button></div>'; }).join('');
-        document.getElementById('cfgDealTypesList').innerHTML = (c.dealTypes || []).map(function(f, i) { return '<div class="dynamic-list-item"><span>' + f + '</span><button class="btn-icon btn-delete" style="width:24px;height:24px" onclick="App.removeConfigItem(\'dealTypes\',' + i + ')"><i class="fa-solid fa-times"></i></button></div>'; }).join('');
-        var ft = document.getElementById('filterType'); ft.innerHTML = '<option value="">همه نوع ملک</option>' + (c.propertyTypes || []).map(function(t) { return '<option value="' + t + '">' + t + '</option>'; }).join('');
-        var fd = document.getElementById('filterDeal'); fd.innerHTML = '<option value="">همه معاملات</option>' + (c.dealTypes || []).map(function(t) { return '<option value="' + t + '">' + t + '</option>'; }).join('');
-        ['propTypeSelect', 'reqTypeSelect'].forEach(function(id) { var el = document.getElementById(id); if (el) el.innerHTML = (c.propertyTypes || []).map(function(t) { return '<option value="' + t + '">' + t + '</option>'; }).join(''); });
-        ['propDealSelect', 'reqDealSelect'].forEach(function(id) { var el = document.getElementById(id); if (el) el.innerHTML = (c.dealTypes || []).map(function(t) { return '<option value="' + t + '">' + t + '</option>'; }).join(''); });
-        ['propFeaturesContainer', 'reqFeaturesContainer'].forEach(function(id) { var el = document.getElementById(id); if (el) el.innerHTML = (c.features || []).map(function(f) { return '<input type="checkbox" class="tag-check" id="' + id + '_' + f + '" value="' + f + '"><label class="tag-label" for="' + id + '_' + f + '">' + f + '</label>'; }).join(''); });
-    },
+toggleStatusMenu:btn=>{const dd=btn.nextElementSibling;const isOpen=dd.style.display==='flex';document.querySelectorAll('.status-dropdown').forEach(d=>d.style.display='none');if(!isOpen)dd.style.display='flex'},
+setStatus:async(store,id,status)=>{const item=await dbOps.get(store,id);if(item){item.status=status;await dbOps.put(store,item);App.renderProperties()}},
 
-    addConfigItem: function(key) {
-        var c = App.cache.config;
-        var im = { features: 'cfgNewFeature', propertyTypes: 'cfgNewPropType', dealTypes: 'cfgNewDealType' };
-        var input = document.getElementById(im[key]); if (!input || !input.value.trim()) return;
-        if (!c[key]) c[key] = []; c[key].push(input.value.trim()); input.value = '';
-        dbOps.put('config', c).then(function() { App.renderConfigPanels(); });
-    },
+searchMatchingRequests:async(propId)=>{const prop=await dbOps.get('properties',propId);if(!prop)return;const reqs=App.cache.requests;const results=[];reqs.forEach(r=>{if(prop.type&&r.type&&prop.type!==r.type)return;if(prop.deal&&r.deal&&prop.deal!==r.deal)return;const pa=parseFloat(prop.area)||0;const ra=parseFloat(r.area)||0;if(ra>0&&pa>0&&Math.abs(pa-ra)/Math.max(ra,1)>.25)return;if(prop.deal&&(prop.deal.includes('رهن')||prop.deal.includes('اجاره'))){if((prop.rent||0)>(r.rent||999999999999)&&(prop.price||0)>(r.budget||999999999999))return}else{if(prop.price>(r.budget||0))return}results.push(r)});App.displaySearchResults('property',prop,results)},
+searchMatchingProperties:async(reqId)=>{const req=await dbOps.get('requests',reqId);if(!req)return;const props=App.cache.properties.filter(p=>!p.isArchived);const results=[];props.forEach(p=>{if(p.status==='inactive')return;if(req.type&&p.type&&req.type!==p.type)return;if(req.deal&&p.deal&&req.deal!==p.deal)return;const pa=parseFloat(p.area)||0;const ra=parseFloat(req.area)||0;if(ra>0&&pa>0&&Math.abs(pa-ra)/Math.max(ra,1)>.25)return;if(req.deal&&(req.deal.includes('رهن')||req.deal.includes('اجاره'))){if((p.rent||0)>(req.rent||999999999999)&&(p.price||0)>(req.budget||999999999999))return}else{if(p.price>(req.budget||0))return}results.push(p)});App.displaySearchResults('request',req,results)},
 
-    removeConfigItem: function(key, i) {
-        var c = App.cache.config;
-        if (c[key]) { c[key].splice(i, 1); dbOps.put('config', c).then(function() { App.renderConfigPanels(); }); }
-    },
+displaySearchResults:(type,source,results)=>{const titleEl=document.getElementById('searchResultsTitle');const bodyEl=document.getElementById('searchResultsBody');if(type==='property'){titleEl.innerHTML=`<i class="fa-solid fa-users"></i> متقاضیان تطبیق‌یافته با «${source.title||'ملک'}»`;if(results.length===0){bodyEl.innerHTML='<div style="text-align:center;padding:30px;color:#94a3b8"><i class="fa-solid fa-search" style="font-size:2rem;margin-bottom:10px;display:block"></i>متقاضی تطبیق‌یافته‌ای یافت نشد</div>';App.openModal('searchResults');return}bodyEl.innerHTML=`<div style="margin-bottom:12px;font-size:.85rem;color:#64748b">${results.length} متقاضی تطبیق‌یافته</div>`+results.map(r=>`<div class="search-result-card"><div style="flex:1"><strong style="font-size:.9rem">${r.name||''}</strong><br><span style="font-size:.75rem;color:#64748b"><i class="fa-solid fa-phone"></i> ${r.phone||''} | ${r.type||''} | ${r.deal||''}</span><br><span style="font-size:.75rem"><i class="fa-solid fa-money-bill" style="color:#10b981"></i> بودجه: ${MoneyHelper.format(r.budget)} ${r.rent?'| اجاره: '+MoneyHelper.format(r.rent):''}</span><br><span style="font-size:.75rem"><i class="fa-solid fa-ruler-combined" style="color:#8b5cf6"></i> متراژ: ${r.area||0}m²</span></div><div><span class="search-match-badge"><i class="fa-solid fa-check"></i> تطبیق</span></div></div>`).join('')}else{titleEl.innerHTML=`<i class="fa-solid fa-building"></i> املاک تطبیق‌یافته با «${source.name||'متقاضی'}»`;if(results.length===0){bodyEl.innerHTML='<div style="text-align:center;padding:30px;color:#94a3b8"><i class="fa-solid fa-search" style="font-size:2rem;margin-bottom:10px;display:block"></i>ملک تطبیق‌یافته‌ای یافت نشد</div>';App.openModal('searchResults');return}bodyEl.innerHTML=`<div style="margin-bottom:12px;font-size:.85rem;color:#64748b">${results.length} ملک تطبیق‌یافته</div>`+results.map(p=>{const imgs=p.images||[];const thumb=imgs.length>0?`<img src="${imgs[0]}" style="width:50px;height:50px;object-fit:cover;border-radius:8px;cursor:pointer" onclick="App.openLightbox(${JSON.stringify(imgs).replace(/"/g,'&quot;')},0)">`:'';return`<div class="search-result-card">${thumb}<div style="flex:1"><strong>${p.title||''}</strong><br><span style="font-size:.75rem;color:#64748b">${p.type||''} | ${p.deal||''}</span><br><span style="font-size:.75rem"><i class="fa-solid fa-money-bill" style="color:#10b981"></i> ${MoneyHelper.format(p.price)} ${p.rent?'| اجاره: '+MoneyHelper.format(p.rent):''}</span><br><span style="font-size:.75rem"><i class="fa-solid fa-location-dot" style="color:#ef4444"></i> ${p.address||''}</span></div><div><span class="search-match-badge"><i class="fa-solid fa-check"></i> تطبیق</span></div></div>`}).join('')}App.openModal('searchResults')},
 
-    saveAgencyInfo: function() {
-        var c = App.cache.config;
-        c.agencyName = document.getElementById('cfgAgencyName').value; c.agencyPhone = document.getElementById('cfgAgencyPhone').value; c.agencyAddress = document.getElementById('cfgAgencyAddress').value;
-        dbOps.put('config', c).then(function() {
-            document.getElementById('headerUser').textContent = c.agencyName; document.getElementById('headerAgency').textContent = c.agencyName; document.getElementById('headerPhone').textContent = c.agencyPhone;
-            App.settings.agencyName = c.agencyName;
-            Swal.fire({ icon: 'success', title: 'ذخیره شد', timer: 1500, showConfirmButton: false });
-        });
-    },
+openContractModal:async(propId)=>{const p=await dbOps.get('properties',propId);if(!p)return;App.contractPropId=propId;document.getElementById('contractAgreed').checked=false;document.getElementById('contractAgreedAmount').value='';document.getElementById('contractAgreedContainer').style.display='none';document.getElementById('contractPropertyInfo').innerHTML=`<div style="background:rgba(59,130,246,.06);padding:12px;border-radius:10px;margin-bottom:10px"><strong style="font-size:1rem">${p.title||''}</strong><br><span style="font-size:.85rem"><i class="fa-solid fa-user"></i> ${p.ownerName||''} | <i class="fa-solid fa-phone"></i> ${p.ownerPhone||''}</span><br><span style="font-size:.85rem"><i class="fa-solid fa-handshake"></i> ${p.deal||''} | <i class="fa-solid fa-ruler-combined"></i> ${p.area||0}m²</span><br><span style="font-size:.85rem"><i class="fa-solid fa-money-bill" style="color:#059669"></i> ${MoneyHelper.format(p.price)} تومان ${p.rent?'| اجاره: '+MoneyHelper.format(p.rent)+' تومان':''}</span></div>`;App.calcContractCommission();App.openModal('contract')},
 
-    openModal: function(type) {
-        var m = { property: 'propertyModal', request: 'requestModal', bankCard: 'bankCardModal', transaction: 'transactionModal', commissionCalc: 'commissionCalcModal', crmTimeline: 'crmTimelineModal', reminder: 'reminderModal', floatingNote: 'floatingNoteModal', about: 'aboutModal', detail: 'detailModal', alarm: 'alarmModal', seasonalVAT: 'seasonalVATModal', contract: 'contractModal', searchResults: 'searchResultsModal' };
-        var el = document.getElementById(m[type]); if (el) el.classList.add('active');
-        if (type === 'transaction') App.loadBankCardsForTransaction();
-    },
+calcContractCommission:()=>{const p=App.cache.properties.find(pr=>pr.id===App.contractPropId);if(!p)return;const isAgreed=document.getElementById('contractAgreed').checked;document.getElementById('contractAgreedContainer').style.display=isAgreed?'':'none';const resultBox=document.getElementById('contractResultBox');const SC=20000000,RC=1800000;let html='';if(isAgreed){const a=MoneyHelper.toNumber(document.getElementById('contractAgreedAmount').value);html=`<div class="commission-result-row"><span>نوع:</span><span>توافقی</span></div><div class="commission-result-row"><span>مبلغ توافقی هر طرف:</span><span>${MoneyHelper.format(a)} تومان</span></div><div class="commission-result-row"><span>جمع کل:</span><span>${MoneyHelper.format(a*2)} تومان</span></div>`}else if(p.deal&&(p.deal.includes('رهن')||p.deal.includes('اجاره'))){const rent=p.rent||0,dep=p.price||0;const oR=Math.round(rent/30*8),tR=Math.round(rent/30*5),dC=Math.round(dep/100000000*6000);let oT=oR+dC,tT=tR+dC;const oC=oT>RC,tC=tT>RC;if(oT>RC)oT=RC;if(tT>RC)tT=RC;html=`<div class="commission-result-row"><span>رهن و اجاره</span><span></span></div><div class="commission-result-row"><span>اجاره ماهیانه:</span><span>${MoneyHelper.format(rent)}</span></div><div class="commission-result-row"><span>رهن:</span><span>${MoneyHelper.format(dep)}</span></div><hr style="margin:6px 0;border:none;border-top:1px dashed rgba(0,0,0,.1)"><div class="commission-result-row"><span>سهم مالک:</span><span>${MoneyHelper.format(oT)}${oC?' ⚠️':''}</span></div><div class="commission-result-row"><span>سهم مستاجر:</span><span>${MoneyHelper.format(tT)}${tC?' ⚠️':''}</span></div><div class="commission-result-row"><span>جمع کل:</span><span>${MoneyHelper.format(oT+tT)} تومان</span></div>`}else{const price=p.price||0;let comm=Math.round(price*0.0015);if(comm>SC)comm=SC;const vat=Math.round(comm*0.10);const total=comm+vat;html=`<div class="commission-result-row"><span>خرید و فروش</span><span></span></div><div class="commission-result-row"><span>ثمن:</span><span>${MoneyHelper.format(price)}</span></div><div class="commission-result-row"><span>کمیسیون هر طرف:</span><span>${MoneyHelper.format(comm)}</span></div><div class="commission-result-row"><span>ارزش افزوده:</span><span style="color:#d97706">${MoneyHelper.format(vat)}</span></div><div class="commission-result-row"><span>جمع هر طرف:</span><span>${MoneyHelper.format(total)}</span></div><div class="commission-result-row"><span>جمع کل:</span><span>${MoneyHelper.format(total*2)} تومان</span></div>`}resultBox.innerHTML=html},
 
-    closeModal: function(type) {
-        var m = { property: 'propertyModal', request: 'requestModal', bankCard: 'bankCardModal', transaction: 'transactionModal', commissionCalc: 'commissionCalcModal', crmTimeline: 'crmTimelineModal', reminder: 'reminderModal', floatingNote: 'floatingNoteModal', about: 'aboutModal', detail: 'detailModal', alarm: 'alarmModal', seasonalVAT: 'seasonalVATModal', contract: 'contractModal', searchResults: 'searchResultsModal' };
-        var el = document.getElementById(m[type]); if (el) el.classList.remove('active');
-    },
+registerContractTransaction:async()=>{App.closeModal('contract');App.openModal('transaction');const p=App.cache.properties.find(pr=>pr.id===App.contractPropId);if(p){document.getElementById('transType').value='درآمد';document.getElementById('transTitle').value='کمیسیون قرارداد '+p.title;const sel=document.getElementById('transPropertyId');sel.innerHTML=`<option value="${p.id}">${p.title} (${p.ownerName||''})</option>`;if(p.colleagueName)document.getElementById('transColleagueFinanceContainer').style.display=''}const rows=document.querySelectorAll('#contractResultBox .commission-result-row');if(rows.length>0){const lastRow=rows[rows.length-1];const amountText=lastRow.querySelector('span:last-child').textContent;document.getElementById('transAmount').value=amountText.replace(/[^\d,]/g,'')}},
 
-    quickAddFeature: function(ctx) {
-        var iid = ctx === 'prop' ? 'propQuickFeature' : 'reqQuickFeature'; var cid = ctx === 'prop' ? 'propFeaturesContainer' : 'reqFeaturesContainer';
-        var input = document.getElementById(iid); if (!input || !input.value.trim()) return;
-        var container = document.getElementById(cid); var f = input.value.trim(); var ci = cid + '_' + f;
-        if (document.getElementById(ci)) { input.value = ''; return; }
-        var cb = document.createElement('input'); cb.type = 'checkbox'; cb.className = 'tag-check'; cb.id = ci; cb.value = f; cb.checked = true;
-        var lb = document.createElement('label'); lb.className = 'tag-label'; lb.htmlFor = ci; lb.textContent = f;
-        container.appendChild(cb); container.appendChild(lb); input.value = '';
-    },
+printContractReceipt:()=>{const p=App.cache.properties.find(pr=>pr.id===App.contractPropId);if(!p)return;const cfg=App.cache.config||{};const resultHTML=document.getElementById('contractResultBox').innerHTML;const printArea=document.getElementById('printArea');printArea.style.display='block';printArea.innerHTML=`<div style="font-family:Tahoma,sans-serif;direction:rtl;color:#000;padding:20px"><div style="text-align:center;border-bottom:3px double #000;padding-bottom:15px;margin-bottom:20px"><h2>${cfg.agencyName||'املاک فایلینکس'}</h2><p style="font-size:.85rem">تلفن: ${cfg.agencyPhone||'-'} | آدرس: ${cfg.agencyAddress||'-'}</p><h3 style="margin:8px 0">صورتحساب کمیسیون</h3></div><table style="width:100%;border-collapse:collapse;margin-bottom:15px"><tr><td style="border:1px solid #666;padding:8px;font-weight:bold;width:35%">عنوان ملک</td><td style="border:1px solid #666;padding:8px">${p.title||'-'}</td></tr><tr><td style="border:1px solid #666;padding:8px;font-weight:bold">مالک</td><td style="border:1px solid #666;padding:8px">${p.ownerName||'-'} (${p.ownerPhone||'-'})</td></tr><tr><td style="border:1px solid #666;padding:8px;font-weight:bold">معامله</td><td style="border:1px solid #666;padding:8px">${p.deal||'-'}</td></tr><tr><td style="border:1px solid #666;padding:8px;font-weight:bold">آدرس</td><td style="border:1px solid #666;padding:8px">${p.address||'-'}</td></tr></table><div style="border:1px solid #666;padding:12px;border-radius:8px;margin-bottom:15px">${resultHTML}</div><div style="display:flex;justify-content:space-between;margin-top:40px"><div style="text-align:center;width:40%;border-top:2px solid #000;padding-top:10px"><strong>امضای املاک</strong><br><br></div><div style="text-align:center;width:40%;border-top:2px solid #000;padding-top:10px"><strong>امضای مشتری</strong><br><br></div></div></div>`;window.print();setTimeout(()=>{printArea.style.display='none'},1000)},
 
-    handlePhotoUpload: function(event) {
-        var files = event.target.files; var imgs = []; try { imgs = JSON.parse(document.getElementById('propImages').value || '[]'); } catch (e) {}
-        Array.from(files).forEach(function(file) {
-            if (imgs.length >= 4) return;
-            var reader = new FileReader();
-            reader.onload = function(e) { imgs.push(e.target.result); document.getElementById('propImages').value = JSON.stringify(imgs); App.renderPhotoPreview(); };
-            reader.readAsDataURL(file);
-        });
-    },
+openCommissionCalc:()=>{document.getElementById('calcDealType').value='sale';document.getElementById('calcSaleTotal').value='';document.getElementById('calcRentAmount').value='';document.getElementById('calcDepositAmount').value='';document.getElementById('calcAgreed').checked=false;document.getElementById('calcAgreedAmount').value='';document.getElementById('saleCalcFields').style.display='';document.getElementById('rentCalcFields').style.display='none';document.getElementById('agreedAmountContainer').style.display='none';document.getElementById('commissionResultBox').innerHTML='<div style="text-align:center;color:#64748b;font-size:.85rem">اطلاعات را وارد کنید...</div>';App.openModal('commissionCalc')},
+calcStandaloneCommission:()=>{const deal=document.getElementById('calcDealType').value;const agreed=document.getElementById('calcAgreed').checked;document.getElementById('saleCalcFields').style.display=deal==='sale'?'':'none';document.getElementById('rentCalcFields').style.display=deal==='rent'?'':'none';document.getElementById('agreedAmountContainer').style.display=agreed?'':'none';const SC=20000000,RC=1800000;let html='';if(agreed){const a=MoneyHelper.toNumber(document.getElementById('calcAgreedAmount').value);html=`<div class="commission-result-row"><span>توافقی هر طرف:</span><span>${MoneyHelper.format(a)}</span></div><div class="commission-result-row"><span>جمع کل:</span><span>${MoneyHelper.format(a*2)}</span></div>`}else if(deal==='sale'){const price=MoneyHelper.toNumber(document.getElementById('calcSaleTotal').value);let comm=Math.round(price*0.0015);const capped=comm>SC;if(capped)comm=SC;const vat=Math.round(comm*0.10);const total=comm+vat;html=`<div class="commission-result-row"><span>ثمن:</span><span>${MoneyHelper.format(price)}</span></div><div class="commission-result-row"><span>کمیسیون هر طرف:</span><span>${MoneyHelper.format(comm)}</span></div>${capped?'<div style="background:rgba(239,68,68,.08);border:1px solid #ef4444;border-radius:6px;padding:4px 8px;font-size:.72rem;color:#ef4444;margin:4px 0"><i class="fa-solid fa-triangle-exclamation"></i> سقف نرخنامه اعمال شد</div>':''}<div class="commission-result-row"><span>ارزش افزوده:</span><span style="color:#d97706">${MoneyHelper.format(vat)}</span></div><div class="commission-result-row"><span>جمع هر طرف:</span><span>${MoneyHelper.format(total)}</span></div><div class="commission-result-row"><span>جمع کل:</span><span>${MoneyHelper.format(total*2)} تومان</span></div>`}else{const rent=MoneyHelper.toNumber(document.getElementById('calcRentAmount').value);const dep=MoneyHelper.toNumber(document.getElementById('calcDepositAmount').value);const oR=Math.round(rent/30*8),tR=Math.round(rent/30*5),dC=Math.round(dep/100000000*6000);let oT=oR+dC,tT=tR+dC;const oC=oT>RC,tC=tT>RC;if(oT>RC)oT=RC;if(tT>RC)tT=RC;html=`<div class="commission-result-row"><span>اجاره:</span><span>${MoneyHelper.format(rent)}</span></div><div class="commission-result-row"><span>رهن:</span><span>${MoneyHelper.format(dep)}</span></div><hr style="margin:6px 0;border:none;border-top:1px dashed rgba(0,0,0,.1)"><div class="commission-result-row"><span>سهم مالک:</span><span>${MoneyHelper.format(oT)}${oC?' ⚠️':''}</span></div><div class="commission-result-row"><span>سهم مستاجر:</span><span>${MoneyHelper.format(tT)}${tC?' ⚠️':''}</span></div><div class="commission-result-row"><span>جمع کل:</span><span>${MoneyHelper.format(oT+tT)} تومان</span></div>`}document.getElementById('commissionResultBox').innerHTML=html},
 
-    renderPhotoPreview: function() {
-        var container = document.getElementById('photoUploadContainer'); var imgs = []; try { imgs = JSON.parse(document.getElementById('propImages').value || '[]'); } catch (e) {}
-        container.innerHTML = '';
-        imgs.forEach(function(img, i) { container.innerHTML += '<div class="photo-preview-item"><img src="' + img + '"><button type="button" class="photo-remove-btn" onclick="App.removePhoto(' + i + ')"><i class="fa-solid fa-times"></i></button></div>'; });
-        if (imgs.length < 4) container.innerHTML += '<button type="button" class="photo-add-btn" onclick="document.getElementById(\'propPhotoInput\').click()"><i class="fa-solid fa-plus"></i></button>';
-    },
+showSeasonalVATReport:async()=>{const transactions=await dbOps.getAll('transactions');const seasons=[{name:'بهار',months:[1,2,3],total:0,items:[]},{name:'تابستان',months:[4,5,6],total:0,items:[]},{name:'پاییز',months:[7,8,9],total:0,items:[]},{name:'زمستان',months:[10,11,12],total:0,items:[]}];transactions.filter(t=>t.type==='درآمد'&&t.vatAmount>0).forEach(t=>{if(t.date){const parts=t.date.split('/');if(parts.length>=2){const m=parseInt(parts[1]);const s=seasons.find(ss=>ss.months.includes(m));if(s){s.total+=t.vatAmount||0;s.items.push(t)}}}});const colors=['#10b981','#f59e0b','#ea580c','#3b82f6'];document.getElementById('vatSeasonsGrid').innerHTML=seasons.map((s,i)=>`<div class="vat-season-card"><h4 style="color:${colors[i]}">${s.name}</h4><div style="font-size:1.2rem;font-weight:900;color:var(--accent)">${MoneyHelper.format(s.total)}</div><div style="font-size:.7rem;color:#64748b">تومان</div></div>`).join('');let rows='';seasons.forEach((s,i)=>{s.items.forEach(t=>{rows+=`<tr><td style="padding:6px"><span style="color:${colors[i]};font-weight:700">${s.name}</span></td><td style="padding:6px">${t.title||''}</td><td style="padding:6px">${MoneyHelper.format(t.amount)}</td><td style="padding:6px;font-weight:700;color:#d97706">${MoneyHelper.format(t.vatAmount)}</td></tr>`})});document.getElementById('vatDetailsBody').innerHTML=rows||'<tr><td colspan="4" style="text-align:center;padding:12px;color:#94a3b8">تراکنش با ارزش افزوده ثبت نشده</td></tr>';App.openModal('seasonalVAT')},
 
-    removePhoto: function(i) { var imgs = []; try { imgs = JSON.parse(document.getElementById('propImages').value || '[]'); } catch (e) {} imgs.splice(i, 1); document.getElementById('propImages').value = JSON.stringify(imgs); App.renderPhotoPreview(); },
+searchPropertyForFinance:async()=>{const s=document.getElementById('transPropertySearch').value;if(!s||s.length<2)return;const props=App.cache.properties.filter(p=>(p.title||'').includes(s)||(p.ownerName||'').includes(s)||(p.address||'').includes(s));const sel=document.getElementById('transPropertyId');sel.innerHTML='<option value="">-- انتخاب --</option>'+props.map(p=>`<option value="${p.id}">${p.title} (${p.ownerName||''})</option>`).join('');sel.onchange=()=>{const pid=parseInt(sel.value);const prop=App.cache.properties.find(p=>p.id===pid);document.getElementById('transColleagueFinanceContainer').style.display=(prop&&prop.colleagueName)?'':'none'}},
+loadBankCardsForTransaction:async()=>{const cards=await dbOps.getAll('bankCards');document.getElementById('transCardId').innerHTML=cards.map(c=>`<option value="${c.id}">${c.title} (${c.number})</option>`).join('')||'<option>کارتی ثبت نشده</option>'},
 
-    toggleStatusMenu: function(btn) {
-        var popup = btn.querySelector('.status-menu-popup') || btn.closest('.status-badge-container').querySelector('.status-menu-popup');
-        document.querySelectorAll('.status-menu-popup').forEach(function(d) { if (d !== popup) d.style.display = 'none'; });
-        if (popup) popup.style.display = popup.style.display === 'block' ? 'none' : 'block';
-    },
+renderDashboard:async()=>{await App.refreshCache();const props=App.cache.properties.filter(p=>!p.isArchived);const reqs=App.cache.requests;document.getElementById('statTotalProperties').textContent=props.length;document.getElementById('statTotalRequests').textContent=reqs.length;document.getElementById('statSaleCount').textContent=props.filter(p=>p.deal&&p.deal.includes('فروش')&&p.status!=='inactive').length;let ac=0;const today=App.getSystemPersianDateTime().date;[...props,...reqs].forEach(item=>{if(item.alarms)item.alarms.forEach(a=>{if(a.date===today&&!a.isTriggered)ac++})});document.getElementById('statRemindersCount').textContent=ac;if(App.chartInstance)App.chartInstance.destroy();const ctx=document.getElementById('propChart');if(ctx){App.chartInstance=new Chart(ctx,{type:'doughnut',data:{labels:['فروش','رهن و اجاره','پیش‌فروش'],datasets:[{data:[props.filter(p=>p.deal&&p.deal.includes('فروش')).length,props.filter(p=>p.deal&&(p.deal.includes('رهن')||p.deal.includes('اجاره'))).length,props.filter(p=>p.deal&&p.deal.includes('پیش')).length],backgroundColor:['#3b82f6','#10b981','#f59e0b']}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'bottom',labels:{font:{family:'Vazirmatn',size:11}}}}}})}const rl=document.getElementById('dashboardRemindersList');let rh='';props.forEach(p=>{if(p.alarms)p.alarms.forEach(a=>{if(!a.isTriggered)rh+=`<div class="item-row reminder-row-alert"><div><strong>${a.title}</strong><br><span style="font-size:.75rem;color:#64748b">${a.date} ساعت ${a.time}</span></div><span style="font-size:.7rem;color:#ef4444">🔔</span></div>`})});rl.innerHTML=rh||'<div style="text-align:center;color:#94a3b8;font-size:.8rem;padding:15px">یادآوری فعالی ندارید</div>'},
 
-    // ===== متدهای placeholder — کد اصلی خودتان را جایگزین کنید =====
-    renderProperties: function() {},
-    renderRequests: function() {},
-    renderBankCards: function() {},
-    renderTransactions: function() {},
-    renderArchive: function() {},
-    loadBankCardsForTransaction: function() {},
-    searchPropertyForFinance: function() {},
-    openCommissionCalc: function() { App.openModal('commissionCalc'); },
-    calcStandaloneCommission: function() {},
-    calcContractCommission: function() {},
-    registerContractTransaction: function() {},
-    printContractReceipt: function() {},
-    showSeasonalVATReport: function() { App.openModal('seasonalVAT'); },
-    activateProLicense: function() {},
-    exportDB: function() {},
-    importDB: function() {},
-    addAgent: function() {}
+renderProperties:async()=>{await App.refreshCache();const grid=document.getElementById('propertiesGrid');let props=App.cache.properties.filter(p=>!p.isArchived);const search=(document.getElementById('propertySearch').value||'').toLowerCase();if(search)props=props.filter(p=>(p.title||'').toLowerCase().includes(search)||(p.address||'').toLowerCase().includes(search)||(p.ownerName||'').toLowerCase().includes(search));const fT=document.getElementById('filterType').value;const fD=document.getElementById('filterDeal').value;const fMin=MoneyHelper.toNumber(document.getElementById('filterMinPrice').value);const fMax=MoneyHelper.toNumber(document.getElementById('filterMaxPrice').value);if(fT)props=props.filter(p=>p.type===fT);if(fD)props=props.filter(p=>p.deal===fD);if(fMin)props=props.filter(p=>p.price>=fMin);if(fMax)props=props.filter(p=>p.price<=fMax);if(App.currentUser&&App.currentUser.role==='agent')props=props.filter(p=>p.createdBy===App.currentUsername);
 
-};
-// ===== پایان تعریف App =====
+grid.innerHTML=props.map(p=>{
+const statusLabel=p.status==='active'?'<span class="status-text-label stt-active"><i class="fa-solid fa-circle" style="font-size:.5rem"></i> فعال</span>':p.status==='inactive'?'<span class="status-text-label stt-inactive"><i class="fa-solid fa-circle" style="font-size:.5rem"></i> غیرفعال</span>':'<span class="status-text-label stt-review"><i class="fa-solid fa-circle" style="font-size:.5rem"></i> بررسی</span>';
+const imgs=p.images||[];const thumb=imgs.length>0?`<img class="prop-thumbnail" src="${imgs[0]}" onclick='App.openLightbox(${JSON.stringify(imgs)},0)'>`:'';
+const imgBadge=imgs.length>0?`<div class="img-count-badge"><i class="fa-solid fa-camera"></i> ${imgs.length}</div>`:'';
+const ac=(p.alarms||[]).filter(a=>!a.isTriggered).length;
+const rentInfo=(p.deal&&(p.deal.includes('رهن')||p.deal.includes('اجاره')))&&p.rent?`<span><i class="fa-solid fa-money-bill"></i> اجاره: ${MoneyHelper.format(p.rent)}</span>`:'';
+return`<div class="data-card" data-id="${p.id}">${imgBadge}
+<div class="card-body"><div class="card-title-bar"><h4>${statusLabel}${p.title||'بدون عنوان'}</h4>
+<div class="status-menu-container" style="position:relative"><button class="btn-icon" onclick="App.toggleStatusMenu(this)" style="font-size:.7rem"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+<div class="status-dropdown"><button onclick="App.setStatus('properties',${p.id},'active')"><i class="fa-solid fa-check-circle" style="color:#10b981"></i> فعال</button><button onclick="App.setStatus('properties',${p.id},'inactive')"><i class="fa-solid fa-times-circle" style="color:#ef4444"></i> غیرفعال</button><button onclick="App.setStatus('properties',${p.id},'review')"><i class="fa-solid fa-clock" style="color:#eab308"></i> بررسی</button></div>
+</div></div>
+<div class="prop-thumb-container">${thumb}</div>
+<div class="card-meta">
+<span><i class="fa-solid fa-building"></i> ${p.type||''}</span>
+<span><i class="fa-solid fa-handshake"></i> ${p.deal||''}</span>
+<span><i class="fa-solid fa-money-bill"></i> ${MoneyHelper.format(p.price)}</span>
+${rentInfo}
+<span><i class="fa-solid fa-ruler-combined"></i> ${p.area||0}m²</span>
+</div><div class="card-desc">${p.address||''}</div></div>
+<div class="card-footer-actions">
+<button class="btn-icon btn-info" title="جزئیات" onclick="App.showPropertyDetail(${p.id})"><i class="fa-solid fa-circle-info"></i></button>
+<button class="btn-icon btn-gallery" title="گالری" onclick='App.openLightbox(${JSON.stringify(imgs)},0)' ${imgs.length===0?'disabled style="opacity:.4"':''}><i class="fa-solid fa-images"></i></button>
+<button class="btn-icon btn-search-match" title="جستجوی متقاضیان" onclick="App.searchMatchingRequests(${p.id})"><i class="fa-solid fa-magnifying-glass"></i></button>
+<button class="btn-icon btn-alarm ${ac>0?'has-alarm':''}" title="آلارم (${ac})" onclick="App.openAlarmModal('property',${p.id})"><i class="fa-solid fa-bell"></i></button>
+<button class="btn-icon btn-contract" title="قرارداد" onclick="App.openContractModal(${p.id})"><i class="fa-solid fa-file-signature"></i></button>
+<button class="btn-icon" title="ویرایش" onclick="App.editProperty(${p.id})"><i class="fa-solid fa-pen-to-square"></i></button>
+<button class="btn-icon" title="CRM" onclick="App.openCRM('property',${p.id},'${(p.ownerName||'').replace(/'/g,"\\'")}')"><i class="fa-solid fa-clock-rotate-left"></i></button>
+<button class="btn-icon btn-delete" title="حذف" onclick="App.deleteProperty(${p.id})"><i class="fa-solid fa-trash"></i></button>
+</div></div>`}).join('')||'<div style="text-align:center;padding:40px;color:#94a3b8">ملکی ثبت نشده</div>'},
 
-// ===== مدیریت فرم‌های ورود =====
-function bindAuthEvents() {
-    var setupForm = document.getElementById('setupForm');
-    if (setupForm) {
-        setupForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            var userName = document.getElementById('setupUser').value.trim();
-            var username = document.getElementById('setupUsername').value.trim();
-            var password = document.getElementById('setupPass').value;
-            var answer = document.getElementById('setupAnswer').value.trim();
-            if (!userName || !username || !password || !answer) {
-                Swal.fire({ icon: 'error', title: 'خطا', text: 'همه فیلدها را پر کنید.' }); return;
-            }
-            dbOps.put('settings', { id: 1, userName: userName, username: username, password: password, securityAnswer: answer, createdAt: Date.now() }).then(function() {
-                localStorage.setItem('flx_user', userName);
-                localStorage.setItem('flx_username', username);
-                Swal.fire({ icon: 'success', title: 'سیستم راه‌اندازی شد!', timer: 1500, showConfirmButton: false }).then(function() { location.reload(); });
-            });
-        });
+renderRequests:async()=>{await App.refreshCache();const grid=document.getElementById('requestsGrid');let reqs=App.cache.requests;const search=(document.getElementById('requestSearch').value||'').toLowerCase();if(search)reqs=reqs.filter(r=>(r.name||'').toLowerCase().includes(search)||(r.phone||'').toLowerCase().includes(search));if(App.currentUser&&App.currentUser.role==='agent')reqs=reqs.filter(r=>r.createdBy===App.currentUsername);grid.innerHTML=reqs.map(r=>{const ac=(r.alarms||[]).filter(a=>!a.isTriggered).length;const rentInfo=(r.deal&&(r.deal.includes('رهن')||r.deal.includes('اجاره')))&&r.rent?`<span><i class="fa-solid fa-money-bill"></i> اجاره: ${MoneyHelper.format(r.rent)}</span>`:'';return`<div class="data-card" data-id="${r.id}"><div class="card-body"><div class="card-title-bar"><h4><i class="fa-solid fa-user" style="color:var(--accent);margin-left:4px"></i> ${r.name||'بدون نام'}</h4></div><div class="card-meta"><span><i class="fa-solid fa-phone"></i> ${r.phone||''}</span><span><i class="fa-solid fa-building"></i> ${r.type||''}</span><span><i class="fa-solid fa-handshake"></i> ${r.deal||''}</span><span><i class="fa-solid fa-money-bill"></i> ${MoneyHelper.format(r.budget)}</span>${rentInfo}<span><i class="fa-solid fa-ruler-combined"></i> ${r.area||0}m²</span></div><div class="card-desc">${r.desc||''}</div></div><div class="card-footer-actions"><button class="btn-icon btn-info" title="جزئیات" onclick="App.showRequestDetail(${r.id})"><i class="fa-solid fa-circle-info"></i></button><button class="btn-icon btn-search-match" title="جستجوی املاک" onclick="App.searchMatchingProperties(${r.id})"><i class="fa-solid fa-magnifying-glass"></i></button><button class="btn-icon btn-alarm ${ac>0?'has-alarm':''}" title="آلارم" onclick="App.openAlarmModal('request',${r.id})"><i class="fa-solid fa-bell"></i></button><button class="btn-icon" title="ویرایش" onclick="App.editRequest(${r.id})"><i class="fa-solid fa-pen-to-square"></i></button><button class="btn-icon" title="CRM" onclick="App.openCRM('request',${r.id},'${(r.name||'').replace(/'/g,"\\'")}')"><i class="fa-solid fa-clock-rotate-left"></i></button><button class="btn-icon btn-delete" title="حذف" onclick="App.deleteRequest(${r.id})"><i class="fa-solid fa-trash"></i></button></div></div>`}).join('')||'<div style="text-align:center;padding:40px;color:#94a3b8">متقاضی ثبت نشده</div>'},
+
+renderArchive:async()=>{await App.refreshCache();const grid=document.getElementById('archiveGrid');let props=App.cache.properties.filter(p=>p.isArchived);const search=(document.getElementById('archiveSearch').value||'').toLowerCase();if(search)props=props.filter(p=>(p.title||'').toLowerCase().includes(search));grid.innerHTML=props.map(p=>`<div class="data-card" style="opacity:.7"><div class="card-body"><div class="card-title-bar"><h4>${p.title||''}</h4></div><div class="card-meta"><span>${p.type||''}</span><span>${MoneyHelper.format(p.price)}</span></div></div><div class="card-footer-actions"><button class="btn-icon" title="بازگردانی" onclick="App.unarchiveProperty(${p.id})"><i class="fa-solid fa-rotate-left"></i></button><button class="btn-icon btn-delete" title="حذف دائم" onclick="App.deleteProperty(${p.id})"><i class="fa-solid fa-trash"></i></button></div></div>`).join('')||'<div style="text-align:center;padding:40px;color:#94a3b8">بایگانی خالی است</div>'},
+
+renderBanking:async()=>{const cards=await dbOps.getAll('bankCards');const trans=await dbOps.getAll('transactions');document.getElementById('bankCardsGrid').innerHTML=cards.map(c=>`<div class="data-card"><div class="card-body"><div class="card-title-bar"><h4><i class="fa-solid fa-credit-card" style="color:#eab308"></i> ${c.title}</h4></div><div class="card-meta"><span><i class="fa-solid fa-hashtag"></i> ${c.number}</span><span><i class="fa-solid fa-user"></i> ${c.owner}</span></div><div style="font-size:1.1rem;font-weight:900;color:var(--accent);margin-top:6px">${MoneyHelper.format(c.balance)} تومان</div></div><div class="card-footer-actions"><button class="btn-icon" title="یادداشت" onclick="App.openFloatingNote(${c.id})"><i class="fa-solid fa-sticky-note"></i></button><button class="btn-icon btn-delete" title="حذف" onclick="App.deleteBankCard(${c.id})"><i class="fa-solid fa-trash"></i></button></div></div>`).join('')||'<div style="text-align:center;padding:20px;color:#94a3b8">کارتی ثبت نشده</div>';document.getElementById('transactionsList').innerHTML=trans.map(t=>`<tr style="border-bottom:1px solid var(--border-light)"><td style="padding:6px"><span style="background:${t.type==='درآمد'?'rgba(16,185,129,.15)':'rgba(239,68,68,.15)'};color:${t.type==='درآمد'?'#059669':'#ef4444'};padding:2px 8px;border-radius:6px;font-size:.75rem;font-weight:700">${t.type}</span></td><td style="padding:6px">${t.title||''}</td><td style="padding:6px;font-weight:700">${MoneyHelper.format(t.amount)}</td><td style="padding:6px">${t.propertyName||'-'}</td><td style="padding:6px">${t.colleagueStatus||'-'}</td><td style="padding:6px"><button class="btn-icon btn-delete" style="width:28px;height:28px" onclick="App.deleteTransaction(${t.id})"><i class="fa-solid fa-trash"></i></button></td></tr>`).join('')||'<tr><td colspan="6" style="text-align:center;padding:15px;color:#94a3b8">تراکنشی ثبت نشده</td></tr>'},
+
+renderAgents:async()=>{const agents=await dbOps.getAll('agents');document.getElementById('agentsListContainer').innerHTML=agents.map(a=>`<div class="agent-row"><span><i class="fa-solid fa-user-tie" style="color:var(--primary);margin-left:4px"></i> ${a.name} (${a.username}) - <strong>${a.role==='admin'?'مدیر':'مشاور'}</strong></span><button class="btn-icon btn-delete" style="width:28px;height:28px" onclick="App.removeAgent(${a.id})"><i class="fa-solid fa-trash"></i></button></div>`).join('')||'<span style="color:#94a3b8;font-size:.8rem">مشاوری ثبت نشده</span>'},
+
+editProperty:async id=>{const p=await dbOps.get('properties',id);if(!p)return;document.getElementById('propertyId').value=p.id;document.getElementById('propOwnerName').value=p.ownerName||'';document.getElementById('propOwnerPhone').value=p.ownerPhone||'';document.getElementById('propTitle').value=p.title||'';document.getElementById('propTypeSelect').value=p.type||'';document.getElementById('propDealSelect').value=p.deal||'';document.getElementById('propPrice').value=MoneyHelper.format(p.price);document.getElementById('propRent').value=MoneyHelper.format(p.rent);document.getElementById('propArea').value=p.area||'';document.getElementById('propAddress').value=p.address||'';document.getElementById('propFeaturesCustom').value=p.featuresCustom||'';document.getElementById('propBuildYear').value=p.buildYear||'';document.getElementById('propDate').value=p.date||'';document.getElementById('propMargin').value=p.margin||'';document.getElementById('propStreetWidth').value=p.streetWidth||'';document.getElementById('propColleagueName').value=p.colleagueName||'';document.getElementById('propColleaguePhone').value=p.colleaguePhone||'';document.getElementById('propColleagueOffice').value=p.colleagueOffice||'';document.getElementById('propDesc').value=p.desc||'';document.getElementById('propImages').value=JSON.stringify(p.images||[]);App.renderPhotoPreview();const sf=p.features||[];document.querySelectorAll('#propFeaturesContainer .tag-check').forEach(cb=>{cb.checked=sf.includes(cb.value)});App.toggleRentBox(p.deal||'');App.openModal('property')},
+deleteProperty:async id=>{const r=await Swal.fire({title:'حذف ملک؟',icon:'warning',showCancelButton:true,confirmButtonText:'حذف'});if(r.isConfirmed){await dbOps.del('properties',id);App.renderProperties();App.renderDashboard()}},
+archiveProperty:async id=>{const p=await dbOps.get('properties',id);if(p){p.isArchived=true;await dbOps.put('properties',p);App.renderProperties();App.renderArchive()}},
+unarchiveProperty:async id=>{const p=await dbOps.get('properties',id);if(p){p.isArchived=false;await dbOps.put('properties',p);App.renderArchive();App.renderProperties()}},
+editRequest:async id=>{const r=await dbOps.get('requests',id);if(!r)return;document.getElementById('requestId').value=r.id;document.getElementById('reqName').value=r.name||'';document.getElementById('reqPhone').value=r.phone||'';document.getElementById('reqTypeSelect').value=r.type||'';document.getElementById('reqDealSelect').value=r.deal||'';document.getElementById('reqBudget').value=MoneyHelper.format(r.budget);document.getElementById('reqRent').value=MoneyHelper.format(r.rent);document.getElementById('reqArea').value=r.area||'';document.getElementById('reqBuildYear').value=r.buildYear||'';document.getElementById('reqDate').value=r.date||'';document.getElementById('reqMargin').value=r.margin||'';document.getElementById('reqStreetWidth').value=r.streetWidth||'';document.getElementById('reqFeaturesCustom').value=r.featuresCustom||'';document.getElementById('reqDesc').value=r.desc||'';const sf=r.features||[];document.querySelectorAll('#reqFeaturesContainer .tag-check').forEach(cb=>{cb.checked=sf.includes(cb.value)});App.toggleReqRentFields(r.deal||'');App.openModal('request')},
+deleteRequest:async id=>{const r=await Swal.fire({title:'حذف متقاضی؟',icon:'warning',showCancelButton:true,confirmButtonText:'حذف'});if(r.isConfirmed){await dbOps.del('requests',id);App.renderRequests();App.renderDashboard()}},
+
+showPropertyDetail:async id=>{const p=await dbOps.get('properties',id);if(!p)return;document.getElementById('detailModalHeader').className='modal-header header-property';document.getElementById('detailModalTitle').innerHTML='<i class="fa-solid fa-building"></i> جزئیات ملک';const features=(p.features||[]).map(f=>`<span class="detail-tag">${f}</span>`).join(' ');const imgs=p.images||[];const imgHTML=imgs.map((img,i)=>`<img class="detail-img-thumb" src="${img}" onclick='App.openLightbox(${JSON.stringify(imgs).replace(/"/g,"&quot;")},${i})'>`).join('');const alarms=(p.alarms||[]).map(a=>`<div style="font-size:.78rem;padding:4px 0;border-bottom:1px dashed var(--border-light)"><i class="fa-solid fa-bell" style="color:#d97706"></i> <strong>${a.title}</strong> - ${a.date} ${a.time} ${a.isTriggered?'(اجرا شده)':''}</div>`).join('');document.getElementById('detailModalBody').innerHTML=`<div class="detail-grid"><div class="detail-label">عنوان</div><div class="detail-value">${p.title||'-'}</div><div class="detail-label">مالک</div><div class="detail-value">${p.ownerName||'-'} ${p.ownerPhone?'('+p.ownerPhone+')':''}</div><div class="detail-label">نوع ملک</div><div class="detail-value">${p.type||'-'}</div><div class="detail-label">معامله</div><div class="detail-value">${p.deal||'-'}</div><div class="detail-label">قیمت</div><div class="detail-value" style="font-weight:800;color:var(--accent)">${MoneyHelper.format(p.price)} تومان</div>${p.rent?`<div class="detail-label">اجاره</div><div class="detail-value" style="font-weight:800;color:#d97706">${MoneyHelper.format(p.rent)} تومان</div>`:''}<div class="detail-label">متراژ</div><div class="detail-value">${p.area||0}m²</div><div class="detail-label">آدرس</div><div class="detail-value">${p.address||'-'}</div><div class="detail-label">سال ساخت</div><div class="detail-value">${p.buildYear||'-'}</div><div class="detail-label">تاریخ</div><div class="detail-value">${p.date||'-'}</div><div class="detail-label">حاشیه</div><div class="detail-value">${p.margin||'-'} متر</div><div class="detail-label">عرض معبر</div><div class="detail-value">${p.streetWidth||'-'} متر</div><div class="detail-label">وضعیت</div><div class="detail-value">${p.status==='active'?'✅ فعال':p.status==='inactive'?'❌ غیرفعال':'⏳ بررسی'}</div><div class="detail-label">امکانات</div><div class="detail-value"><div class="detail-tags">${features||'-'}</div></div><div class="detail-label">توضیحات</div><div class="detail-value">${p.desc||'-'}</div>${p.colleagueName?`<div class="detail-label">همکار</div><div class="detail-value">${p.colleagueName} ${p.colleaguePhone?'('+p.colleaguePhone+')':''}</div>`:''}</div>${imgHTML?`<div style="margin-top:12px"><strong>📸 تصاویر:</strong><div class="detail-images">${imgHTML}</div></div>`:''}${alarms?`<div style="margin-top:12px"><strong>🔔 آلارم‌ها:</strong>${alarms}</div>`:''}`;document.getElementById('detailModalFooter').innerHTML=`<button class="btn-secondary" onclick="App.closeModal('detail')">بستن</button><button class="btn-primary" onclick="App.closeModal('detail');App.editProperty(${p.id})"><i class="fa-solid fa-pen"></i> ویرایش</button>`;App.openModal('detail')},
+showRequestDetail:async id=>{const r=await dbOps.get('requests',id);if(!r)return;document.getElementById('detailModalHeader').className='modal-header header-request';document.getElementById('detailModalTitle').innerHTML='<i class="fa-solid fa-user-tag"></i> جزئیات متقاضی';const features=(r.features||[]).map(f=>`<span class="detail-tag">${f}</span>`).join(' ');document.getElementById('detailModalBody').innerHTML=`<div class="detail-grid"><div class="detail-label">نام</div><div class="detail-value">${r.name||'-'}</div><div class="detail-label">تلفن</div><div class="detail-value">${r.phone||'-'}</div><div class="detail-label">نوع ملک</div><div class="detail-value">${r.type||'-'}</div><div class="detail-label">معامله</div><div class="detail-value">${r.deal||'-'}</div><div class="detail-label">بودجه</div><div class="detail-value" style="font-weight:800;color:var(--accent)">${MoneyHelper.format(r.budget)} تومان</div>${r.rent?`<div class="detail-label">اجاره</div><div class="detail-value" style="font-weight:800;color:#d97706">${MoneyHelper.format(r.rent)} تومان</div>`:''}<div class="detail-label">متراژ</div><div class="detail-value">${r.area||0}m²</div><div class="detail-label">سال ساخت</div><div class="detail-value">${r.buildYear||'-'}</div><div class="detail-label">تاریخ</div><div class="detail-value">${r.date||'-'}</div><div class="detail-label">امکانات</div><div class="detail-value"><div class="detail-tags">${features||'-'}</div></div><div class="detail-label">یادداشت</div><div class="detail-value">${r.desc||'-'}</div></div>`;document.getElementById('detailModalFooter').innerHTML=`<button class="btn-secondary" onclick="App.closeModal('detail')">بستن</button><button class="btn-primary" onclick="App.closeModal('detail');App.editRequest(${r.id})"><i class="fa-solid fa-pen"></i> ویرایش</button>`;App.openModal('detail')},
+
+openAlarmModal:async(type,id)=>{document.getElementById('alarmItemType').value=type;document.getElementById('alarmItemId').value=id;document.getElementById('alarmTitle').value='';document.getElementById('alarmDesc').value='';document.getElementById('alarmDate').value=App.getSystemPersianDateTime().date;document.getElementById('alarmTime').value='';document.getElementById('alarmSoundType').value='classic';document.querySelectorAll('.alarm-sound-btn').forEach(b=>{b.style.background='';b.style.color=''});const cb=document.querySelector('.alarm-sound-btn[data-sound="classic"]');if(cb){cb.style.background='var(--primary)';cb.style.color='white'}const sn=type==='property'?'properties':'requests';const item=await dbOps.get(sn,parseInt(id));const container=document.getElementById('alarmListContainer');if(item&&item.alarms&&item.alarms.length>0){container.innerHTML='<strong style="font-size:.8rem">آلارم‌ها:</strong>'+item.alarms.map((a,i)=>`<div class="dynamic-list-item" style="margin-top:4px"><span>${a.title} | ${a.date} ${a.time}</span><button class="btn-icon btn-delete" style="width:24px;height:24px" onclick="App.deleteAlarm('${type}',${id},${i})"><i class="fa-solid fa-times"></i></button></div>`).join('')}else{container.innerHTML='<span style="font-size:.75rem;color:#94a3b8">آلارمی ثبت نشده</span>'}App.openModal('alarm')},
+deleteAlarm:async(type,id,ai)=>{const sn=type==='property'?'properties':'requests';const item=await dbOps.get(sn,parseInt(id));if(item&&item.alarms){item.alarms.splice(ai,1);await dbOps.put(sn,item);App.openAlarmModal(type,id)}},
+
+openCRM:async(type,id,name)=>{document.getElementById('crmCustomerTitle').textContent=name;document.getElementById('crmCustomerId').value=type+'_'+id;const logs=(await dbOps.getAll('crmLogs')).filter(l=>l.entityId===type+'_'+id);document.getElementById('crmTimelineContent').innerHTML=logs.sort((a,b)=>b.id-a.id).map(l=>`<div class="timeline-item"><div class="timeline-date">${l.date||''}</div><div>${l.desc||''}</div></div>`).join('')||'<div style="color:#94a3b8;font-size:.78rem">رویدادی ثبت نشده</div>';App.openModal('crmTimeline')},
+openFloatingNote:async cardId=>{const c=await dbOps.get('bankCards',cardId);document.getElementById('noteCardId').value=cardId;document.getElementById('noteText').value=(c&&c.note)||'';App.openModal('floatingNote')},
+deleteBankCard:async id=>{const r=await Swal.fire({title:'حذف کارت؟',icon:'warning',showCancelButton:true,confirmButtonText:'حذف'});if(r.isConfirmed){await dbOps.del('bankCards',id);App.renderBanking()}},
+deleteTransaction:async id=>{const r=await Swal.fire({title:'حذف تراکنش؟',icon:'warning',showCancelButton:true,confirmButtonText:'حذف'});if(r.isConfirmed){await dbOps.del('transactions',id);App.renderBanking()}},
+
+addAgent:async()=>{const n=document.getElementById('newAgentName').value.trim();const u=document.getElementById('newAgentUsername').value.trim();const p=document.getElementById('newAgentPass').value;const r=document.getElementById('newAgentRole').value;if(!n||!u||!p){Swal.fire('خطا','همه فیلدها الزامی است','warning');return}await dbOps.add('agents',{name:n,username:u,password:p,role:r});document.getElementById('newAgentName').value='';document.getElementById('newAgentUsername').value='';document.getElementById('newAgentPass').value='';App.renderAgents();Swal.fire({icon:'success',title:'مشاور اضافه شد',timer:1500,showConfirmButton:false})},
+removeAgent:async id=>{const r=await Swal.fire({title:'حذف مشاور؟',icon:'warning',showCancelButton:true,confirmButtonText:'حذف'});if(r.isConfirmed){await dbOps.del('agents',id);App.renderAgents()}},
+
+activateProLicense:()=>{
+    const k=document.getElementById('proLicenseKey').value.trim();
+    if(!k)return;
+    const validation=App.validateLicenseCode(App.deviceId,k);
+    if(validation.valid){
+        localStorage.setItem('filelinx_license_status','activated_pro');
+        localStorage.setItem('filelinx_activated_key',k);
+        localStorage.setItem('filelinx_license_duration',validation.duration);
+        localStorage.setItem('filelinx_license_activated_at',String(Date.now()));
+        App.isPro=true;
+        const badge=document.getElementById('headerLicenseBadge');
+        const label=App.LICENSE_DURATION_LABELS[validation.duration]||'دائمی';
+        if(validation.duration==='PERM'){if(badge){badge.innerText="پرو دائمی";badge.className="license-badge license-pro"}Swal.fire({icon:'success',title:'لایسنس دائمی فعال شد!',timer:3000,showConfirmButton:false})}
+        else{const days=App.LICENSE_DURATION_DAYS[validation.duration];if(badge){badge.innerText=`پرو ${label}`;badge.className="license-badge license-pro"}Swal.fire({icon:'success',title:`لایسنس ${label} فعال شد!`,text:`مدت اعتبار: ${days} روز`,timer:3000,showConfirmButton:false})}
+        document.getElementById('proLicenseKey').value='';
+        App.renderLicenseStatus();
+        App.renderProperties();
+        App.renderRequests();
+    }else{
+        Swal.fire({icon:'error',title:'کد لایسنس نامعتبر',html:'<p style="font-size:.85rem">کد وارد شده صحیح نیست.</p><p style="font-size:.8rem;color:#64748b;margin-top:8px">شناسه دستگاه شما:</p><p style="font-family:monospace;font-weight:900;font-size:1rem;color:#3b82f6;direction:ltr">'+App.deviceId+'</p><p style="font-size:.75rem;color:#94a3b8;margin-top:6px">این شناسه را به پشتیبانی ارسال کنید.</p>',confirmButtonText:'متوجه شدم'});
     }
+},
 
-    var loginForm = document.getElementById('loginForm');
-    if (loginForm) {
-        loginForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            var username = document.getElementById('loginUser').value.trim();
-            var password = document.getElementById('loginPass').value;
-            if (!username || !password) {
-                Swal.fire({ icon: 'error', title: 'خطا', text: 'نام کاربری و رمز عبور را وارد کنید.' }); return;
-            }
-            dbOps.getAll('settings').then(function(users) {
-                var user = null;
-                for (var i = 0; i < users.length; i++) {
-                    if (users[i].username === username && users[i].password === password) { user = users[i]; break; }
-                }
-                if (!user) {
-                    Swal.fire({ icon: 'error', title: 'خطا', text: 'نام کاربری یا رمز عبور اشتباه است.' }); return;
-                }
-                localStorage.setItem('flx_user', user.userName || username);
-                localStorage.setItem('flx_username', username);
-                Swal.fire({ icon: 'success', title: 'خوش آمدید ' + (user.userName || username), timer: 1500, showConfirmButton: false }).then(function() { location.reload(); });
-            });
-        });
-    }
+exportDB:async()=>{const data={};for(const s of ['settings','config','properties','requests','bankCards','transactions','crmLogs','reminders','agents']){data[s]=await dbOps.getAll(s)}const blob=new Blob([JSON.stringify(data)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='filelinx_backup_'+Date.now()+'.flnx';a.click()},
+importDB:async event=>{const f=event.target.files[0];if(!f)return;const r=await Swal.fire({title:'بازیابی پشتیبان؟',text:'داده‌های فعلی جایگزین می‌شوند',icon:'warning',showCancelButton:true,confirmButtonText:'بازیابی'});if(!r.isConfirmed)return;try{const data=JSON.parse(await f.text());for(const s of ['settings','config','properties','requests','bankCards','transactions','crmLogs','reminders','agents']){if(data[s]){await dbOps.clear(s);for(const item of data[s])await dbOps.add(s,item)}}Swal.fire({icon:'success',title:'بازیابی موفق',timer:2000,showConfirmButton:false});setTimeout(()=>location.reload(),1500)}catch(e){Swal.fire('خطا','فایل نامعتبر','error')}},
 
-    var recoveryForm = document.getElementById('recoveryForm');
-    if (recoveryForm) {
-        recoveryForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            var answer = document.getElementById('recoveryAnswer').value.trim();
-            var newPass = document.getElementById('recoveryNewPass').value;
-            if (!answer || !newPass) {
-                Swal.fire({ icon: 'error', title: 'خطا', text: 'همه فیلدها را پر کنید.' }); return;
-            }
-            dbOps.getAll('settings').then(function(users) {
-                var user = null;
-                for (var i = 0; i < users.length; i++) {
-                    if (users[i].securityAnswer === answer) { user = users[i]; break; }
-                }
-                if (!user) {
-                    Swal.fire({ icon: 'error', title: 'خطا', text: 'پاسخ امنیتی اشتباه است.' }); return;
-                }
-                user.password = newPass;
-                dbOps.put('settings', user).then(function() {
-                    Swal.fire({ icon: 'success', title: 'رمز عبور تغییر کرد!', timer: 1500, showConfirmButton: false }).then(function() { App.showLogin(); });
-                });
-            });
-        });
-    }
-}
+init:async()=>{
+db=await initDB();await App.ensureConfig();await App.refreshCache();
+App.deviceId=App.generateDeviceId();
+const sf=localStorage.getItem('flx_font');if(sf)App.changeFont(sf);
+if(localStorage.getItem('flx_dark')==='true')document.body.classList.add('dark-mode');
+const settings=await dbOps.get('settings',1);
+if(!settings){document.getElementById('loginCard').classList.remove('active');document.getElementById('setupCard').classList.add('active')}
 
-// ===== مقداردهی اولیه =====
-initDB().then(function(database) {
-    db = database;
-    dbOps.get('settings', 999).then(function(bk) {
-        if (bk && bk.licenseBackup) App._licenseBackup = bk.licenseBackup;
-    }).catch(function() {}).then(function() {
-        App.checkSavedLicense();
-        return App.ensureConfig();
-    }).then(function() {
-        return App.refreshCache();
-    }).then(function() {
-        bindAuthEvents();
+document.getElementById('setupForm').addEventListener('submit',async e=>{e.preventDefault();await dbOps.put('settings',{id:1,displayName:document.getElementById('setupUser').value,username:document.getElementById('setupUsername').value,password:document.getElementById('setupPass').value,securityAnswer:document.getElementById('setupAnswer').value});document.getElementById('setupCard').classList.remove('active');document.getElementById('loginCard').classList.add('active');Swal.fire({icon:'success',title:'سیستم راه‌اندازی شد',timer:1500,showConfirmButton:false})});
 
-        var savedUser = localStorage.getItem('flx_user');
-        if (savedUser) {
-            document.getElementById('authOverlay').style.display = 'none';
-            App.currentUser = savedUser;
-            App.renderConfigPanels();
-            App.renderProperties();
-            App.renderRequests();
-            App.renderBankCards();
-            App.renderTransactions();
-            App.renderArchive();
-            App.renderLicenseStatus();
-            App.startReminderEngine();
-            App.checkSeasonalAlarm();
-            setInterval(function() {
-                var now = new Date();
-                var h = String(now.getHours()).padStart(2, '0');
-                var m = String(now.getMinutes()).padStart(2, '0');
-                var s = String(now.getSeconds()).padStart(2, '0');
-                var el = document.getElementById('liveClock');
-                if (el) el.textContent = h + ':' + m + ':' + s;
-            }, 1000);
-        }
+document.getElementById('loginForm').addEventListener('submit',async e=>{e.preventDefault();const username=document.getElementById('loginUser').value;const password=document.getElementById('loginPass').value;const s=await dbOps.get('settings',1);const agents=await dbOps.getAll('agents');let logged=null;if(s&&username===s.username&&password===s.password)logged={name:s.displayName,role:'admin',username:s.username};else{const ag=agents.find(a=>a.username===username&&a.password===password);if(ag)logged={name:ag.name,role:ag.role,username:ag.username}};if(logged){App.currentUser=logged;App.currentUsername=logged.username;document.getElementById('authOverlay').style.display='none';document.getElementById('headerUser').textContent=logged.name;document.getElementById('userInitial').textContent=logged.name.substring(0,2);const cfg=await dbOps.get('config',1);if(cfg){App.settings.agencyName=cfg.agencyName;document.getElementById('headerAgency').textContent=cfg.agencyName;document.getElementById('headerPhone').textContent=cfg.agencyPhone||''}App.checkSavedLicense();App.renderLicenseStatus();App.renderConfigPanels();App.renderDashboard();App.renderProperties();App.renderRequests();App.renderArchive();App.renderBanking();App.renderAgents();App.startReminderEngine();setTimeout(()=>App.checkSeasonalAlarm(),5000)}else{Swal.fire('خطا','نام کاربری یا رمز عبور اشتباه','error')}});
 
-        if (localStorage.getItem('flx_dark') === 'true') document.body.classList.add('dark-mode');
-        var savedFont = localStorage.getItem('flx_font');
-        if (savedFont) App.changeFont(savedFont);
-        App.moneyFields.forEach(function(id) { MoneyHelper.attach(id); });
-    });
-}).catch(function(err) {
-    console.error('خطای راه‌اندازی:', err);
-});
+document.getElementById('recoveryForm').addEventListener('submit',async e=>{e.preventDefault();const s=await dbOps.get('settings',1);if(s&&document.getElementById('recoveryAnswer').value===s.securityAnswer){s.password=document.getElementById('recoveryNewPass').value;await dbOps.put('settings',s);Swal.fire({icon:'success',title:'رمز تغییر کرد',timer:1500,showConfirmButton:false});App.showLogin()}else{Swal.fire('خطا','پاسخ امنیتی اشتباه','error')}});
+
+document.getElementById('propertyForm').addEventListener('submit',async e=>{e.preventDefault();const id=document.getElementById('propertyId').value;
+if(!id&&!App.isPro){const count=(App.cache.properties||[]).filter(p=>!p.isArchived).length;if(count>=5){Swal.fire({icon:'warning',title:'محدودیت نسخه رایگان',html:'<p style="margin-bottom:10px">حداکثر <strong>۵ ملک</strong> در نسخه رایگان</p><p style="font-size:.85rem">شناسه دستگاه:</p><p style="font-family:monospace;font-weight:900;font-size:1rem;color:#3b82f6;letter-spacing:1px;direction:ltr">'+App.deviceId+'</p><p style="font-size:.8rem;color:#64748b;margin-top:8px">شناسه را به پشتیبانی ارسال کنید.</p>',confirmButtonText:'متوجه شدم'});return}}
+const features=[];document.querySelectorAll('#propFeaturesContainer .tag-check:checked').forEach(cb=>features.push(cb.value));const deal=document.getElementById('propDealSelect').value;
+const data={ownerName:document.getElementById('propOwnerName').value,ownerPhone:document.getElementById('propOwnerPhone').value,title:document.getElementById('propTitle').value,type:document.getElementById('propTypeSelect').value,deal:deal,price:MoneyHelper.toNumber(document.getElementById('propPrice').value),rent:(deal&&(deal.includes('رهن')||deal.includes('اجاره')))?MoneyHelper.toNumber(document.getElementById('propRent').value):0,area:document.getElementById('propArea').value,address:document.getElementById('propAddress').value,features:features,featuresCustom:document.getElementById('propFeaturesCustom').value,buildYear:document.getElementById('propBuildYear').value,date:document.getElementById('propDate').value||App.getSystemPersianDateTime().date,margin:document.getElementById('propMargin').value,streetWidth:document.getElementById('propStreetWidth').value,colleagueName:document.getElementById('propColleagueName').value,colleaguePhone:document.getElementById('propColleaguePhone').value,colleagueOffice:document.getElementById('propColleagueOffice').value,desc:document.getElementById('propDesc').value,images:JSON.parse(document.getElementById('propImages').value||'[]'),status:'active',isArchived:false,createdBy:App.currentUsername};
+if(id){const existing=await dbOps.get('properties',parseInt(id));if(existing){data.alarms=existing.alarms||[];data.id=parseInt(id)}await dbOps.put('properties',data)}else{await dbOps.add('properties',data)}
+document.getElementById('propertyForm').reset();document.getElementById('propertyId').value='';document.getElementById('propImages').value='';App.renderPhotoPreview();App.closeModal('property');App.renderProperties();App.renderDashboard();Swal.fire({icon:'success',title:'ملک ذخیره شد',timer:1500,showConfirmButton:false})});
+
+document.getElementById('requestForm').addEventListener('submit',async e=>{e.preventDefault();const id=document.getElementById('requestId').value;
+if(!id&&!App.isPro){const count=(App.cache.requests||[]).length;if(count>=5){Swal.fire({icon:'warning',title:'محدودیت نسخه رایگان',html:'<p style="margin-bottom:10px">حداکثر <strong>۵ متقاضی</strong> در نسخه رایگان</p><p style="font-size:.85rem">شناسه دستگاه:</p><p style="font-family:monospace;font-weight:900;font-size:1rem;color:#3b82f6;letter-spacing:1px;direction:ltr">'+App.deviceId+'</p><p style="font-size:.8rem;color:#64748b;margin-top:8px">شناسه را به پشتیبانی ارسال کنید.</p>',confirmButtonText:'متوجه شدم'});return}}
+const features=[];document.querySelectorAll('#reqFeaturesContainer .tag-check:checked').forEach(cb=>features.push(cb.value));const deal=document.getElementById('reqDealSelect').value;
+const data={name:document.getElementById('reqName').value,phone:document.getElementById('reqPhone').value,type:document.getElementById('reqTypeSelect').value,deal:deal,budget:MoneyHelper.toNumber(document.getElementById('reqBudget').value),rent:(deal&&(deal.includes('رهن')||deal.includes('اجاره')))?MoneyHelper.toNumber(document.getElementById('reqRent').value):0,area:document.getElementById('reqArea').value,buildYear:document.getElementById('reqBuildYear').value,date:document.getElementById('reqDate').value||App.getSystemPersianDateTime().date,margin:document.getElementById('reqMargin').value,streetWidth:document.getElementById('reqStreetWidth').value,features:features,featuresCustom:document.getElementById('reqFeaturesCustom').value,desc:document.getElementById('reqDesc').value,createdBy:App.currentUsername};
+if(id){const existing=await dbOps.get('requests',parseInt(id));if(existing){data.alarms=existing.alarms||[];data.id=parseInt(id)}await dbOps.put('requests',data)}else{await dbOps.add('requests',data)}
+document.getElementById('requestForm').reset();document.getElementById('requestId').value='';App.closeModal('request');App.renderRequests();App.renderDashboard();Swal.fire({icon:'success',title:'متقاضی ذخیره شد',timer:1500,showConfirmButton:false})});
+
+document.getElementById('bankCardForm').addEventListener('submit',async e=>{e.preventDefault();await dbOps.add('bankCards',{title:document.getElementById('cardTitle').value,number:document.getElementById('cardNumber').value,owner:document.getElementById('cardOwner').value,balance:MoneyHelper.toNumber(document.getElementById('cardBalance').value),note:''});document.getElementById('bankCardForm').reset();App.closeModal('bankCard');App.renderBanking()});
+
+document.getElementById('transactionForm').addEventListener('submit',async e=>{e.preventDefault();const propId=document.getElementById('transPropertyId').value;let propertyName='',colleagueStatus='';if(propId){const prop=await dbOps.get('properties',parseInt(propId));if(prop){propertyName=prop.title;if(prop.colleagueName)colleagueStatus=document.getElementById('transColleagueStatus').value}}
+const amount=MoneyHelper.toNumber(document.getElementById('transAmount').value);const vatAmount=document.getElementById('transType').value==='درآمد'?Math.round(amount*.10):0;
+await dbOps.add('transactions',{cardId:document.getElementById('transCardId').value,type:document.getElementById('transType').value,amount:amount,title:document.getElementById('transTitle').value,propertyId:propId,propertyName:propertyName,colleagueStatus:colleagueStatus,vatAmount:vatAmount,date:App.getSystemPersianDateTime().date});
+const card=await dbOps.get('bankCards',parseInt(document.getElementById('transCardId').value));if(card){card.balance=document.getElementById('transType').value==='درآمد'?card.balance+amount:card.balance-amount;await dbOps.put('bankCards',card)}
+document.getElementById('transactionForm').reset();App.closeModal('transaction');App.renderBanking();Swal.fire({icon:'success',title:'تراکنش ثبت شد',timer:1500,showConfirmButton:false})});
+
+document.getElementById('alarmForm').addEventListener('submit',async e=>{e.preventDefault();const type=document.getElementById('alarmItemType').value;const id=parseInt(document.getElementById('alarmItemId').value);const sn=type==='property'?'properties':'requests';const item=await dbOps.get(sn,id);if(!item)return;if(!item.alarms)item.alarms=[];item.alarms.push({title:document.getElementById('alarmTitle').value,description:document.getElementById('alarmDesc').value,date:document.getElementById('alarmDate').value,time:document.getElementById('alarmTime').value,soundType:document.getElementById('alarmSoundType').value,isTriggered:false});await dbOps.put(sn,item);App.closeModal('alarm');App.renderProperties();App.renderRequests();App.renderDashboard();Swal.fire({icon:'success',title:'آلارم ذخیره شد',timer:1500,showConfirmButton:false})});
+
+document.getElementById('crmLogForm').addEventListener('submit',async e=>{e.preventDefault();await dbOps.add('crmLogs',{entityId:document.getElementById('crmCustomerId').value,desc:document.getElementById('crmLogDesc').value,date:App.getSystemPersianDateTime().date+' '+App.getSystemPersianDateTime().time});document.getElementById('crmLogDesc').value='';const eid=document.getElementById('crmCustomerId').value;const logs=(await dbOps.getAll('crmLogs')).filter(l=>l.entityId===eid);document.getElementById('crmTimelineContent').innerHTML=logs.sort((a,b)=>b.id-a.id).map(l=>`<div class="timeline-item"><div class="timeline-date">${l.date||''}</div><div>${l.desc||''}</div></div>`).join('')});
+
+document.getElementById('reminderForm').addEventListener('submit',async e=>{e.preventDefault();await dbOps.add('reminders',{title:document.getElementById('remTitle').value,time:document.getElementById('remTime').value});document.getElementById('reminderForm').reset();App.closeModal('reminder');Swal.fire({icon:'success',title:'یادآوری ذخیره شد',timer:1500,showConfirmButton:false})});
+
+document.getElementById('floatingNoteForm').addEventListener('submit',async e=>{e.preventDefault();const cid=parseInt(document.getElementById('noteCardId').value);const c=await dbOps.get('bankCards',cid);if(c){c.note=document.getElementById('noteText').value;await dbOps.put('bankCards',c)}App.closeModal('floatingNote')});
+
+document.querySelectorAll('.nav-btn,.bottom-nav button').forEach(btn=>{btn.addEventListener('click',()=>{const v=btn.getAttribute('data-view');document.querySelectorAll('.view-section').forEach(s=>s.classList.remove('active'));document.getElementById(v).classList.add('active');document.querySelectorAll('.nav-btn').forEach(n=>n.classList.remove('active'));document.querySelectorAll('.bottom-nav button').forEach(n=>n.classList.remove('active'));document.querySelector(`.nav-btn[data-view="${v}"]`)?.classList.add('active');btn.classList.add('active')})});
+
+document.getElementById('propertySearch').addEventListener('input',App.renderProperties);
+document.getElementById('requestSearch').addEventListener('input',App.renderRequests);
+document.getElementById('archiveSearch').addEventListener('input',App.renderArchive);
+document.getElementById('filterType').addEventListener('change',App.renderProperties);
+document.getElementById('filterDeal').addEventListener('change',App.renderProperties);
+document.getElementById('filterMinPrice').addEventListener('input',App.renderProperties);
+document.getElementById('filterMaxPrice').addEventListener('input',App.renderProperties);
+
+App.moneyFields.forEach(id=>MoneyHelper.attach(id));
+
+document.addEventListener('click',e=>{if(!e.target.closest('.status-menu-container'))document.querySelectorAll('.status-dropdown').forEach(d=>d.style.display='none')});
+document.querySelectorAll('.modal-overlay').forEach(o=>{o.addEventListener('click',e=>{if(e.target===o)o.classList.remove('active')})});
+
+setInterval(()=>{const n=new Date();document.getElementById('liveClock').textContent=String(n.getHours()).padStart(2,'0')+':'+String(n.getMinutes()).padStart(2,'0')},1000);
+
+document.addEventListener('keydown',e=>{if(document.getElementById('lightboxOverlay').classList.contains('active')){if(e.key==='Escape')App.closeLightbox();if(e.key==='ArrowLeft')App.navigateLightbox(-1);if(e.key==='ArrowRight')App.navigateLightbox(1)}});
+
+if(/iPad|iPhone|iPod/.test(navigator.userAgent)&&!window.MSStream&&!window.navigator.standalone){setTimeout(()=>document.getElementById('iosPwaToast').classList.add('show'),3000);setTimeout(()=>document.getElementById('iosPwaToast').classList.remove('show'),15000)}
+
+console.log('✅ Filelinx v2.1 initialized');
+}};
+
+document.addEventListener('DOMContentLoaded',()=>App.init());
 </script>
 </body>
 </html>
