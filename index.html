@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="theme-color" content="#3b82f6">
-    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <meta name="apple-mobile-web-app-title" content="فایلینکس">
     <title>فایلینکس - سیستم مدیریت املاک حرفه‌ای</title>
@@ -318,7 +318,6 @@ body.dark-mode .app-footer{background:var(--sidebar-bg-dark);color:#94a3b8;borde
 <body>
 
 <div class="auth-container" id="authOverlay">
-    <!--signup card-->
     <div class="auth-card" id="signupCard">
         <h2>ایجاد حساب کاربری</h2>
         <p>برای استفاده از سیستم، یک حساب کاربری ایجاد کنید.</p>
@@ -331,7 +330,6 @@ body.dark-mode .app-footer{background:var(--sidebar-bg-dark);color:#94a3b8;borde
         </form>
     </div>
 
-    <!--login card-->
     <div class="auth-card active" id="loginCard">
         <div class="brand-container" style="align-items:center;margin-bottom:15px;"><div class="brand-fa" style="font-size:32px;">فایلینکس</div><div class="brand-en" style="font-size:13px;">FILELINX REAL ESTATE CRM</div></div>
         <p>سیستم مدیریت املاک حرفه‌ای</p>
@@ -344,7 +342,6 @@ body.dark-mode .app-footer{background:var(--sidebar-bg-dark);color:#94a3b8;borde
         </form>
     </div>
 
-    <!--recovery card-->
     <div class="auth-card" id="recoveryCard">
         <h2>بازیابی رمز عبور</h2>
         <p>برای بازیابی رمز عبور، به سوال امنیتی پاسخ دهید.</p>
@@ -513,7 +510,6 @@ body.dark-mode .app-footer{background:var(--sidebar-bg-dark);color:#94a3b8;borde
     <footer class="app-footer">© ۱۴۰۵ - طراحی و توسعه اختصاصی توسط <strong>سید حسن علوی</strong> | تمامی حقوق <strong>فایلینکس</strong> محفوظ است.</footer>
 </main>
 
-<!-- PROPERTY MODAL -->
 <div class="modal-overlay" id="propertyModal"><div class="modal-box"><div class="modal-header header-property"><h3><i class="fa-solid fa-house"></i> ثبت / ویرایش فایل ملک</h3><button class="action-btn" onclick="App.closeModal('property')"><i class="fa-solid fa-xmark"></i></button></div>
 <form id="propertyForm"><input type="hidden" id="propertyId"><div class="modal-body">
 <div class="form-section-divider"><i class="fa-solid fa-user"></i> اطلاعات مالک</div>
@@ -555,7 +551,6 @@ body.dark-mode .app-footer{background:var(--sidebar-bg-dark);color:#94a3b8;borde
 <div class="form-group full-width" style="margin-top:8px"><label>توضیحات تکمیلی</label><textarea class="form-control" id="propDesc" rows="2"></textarea></div>
 </div><div class="modal-footer"><button type="button" class="btn-secondary" onclick="App.closeModal('property')">انصراف</button><button type="submit" class="btn-primary">ذخیره فایل</button></div></form></div></div>
 
-<!-- REQUEST MODAL -->
 <div class="modal-overlay" id="requestModal"><div class="modal-box"><div class="modal-header header-request"><h3><i class="fa-solid fa-user-tag"></i> ثبت / ویرایش متقاضی</h3><button class="action-btn" onclick="App.closeModal('request')"><i class="fa-solid fa-xmark"></i></button></div>
 <form id="requestForm"><input type="hidden" id="requestId"><div class="modal-body">
 <div class="form-section-divider"><i class="fa-solid fa-user"></i> اطلاعات مشتری</div>
@@ -581,7 +576,6 @@ body.dark-mode .app-footer{background:var(--sidebar-bg-dark);color:#94a3b8;borde
 <div class="form-group full-width"><label>یادداشت و مناطق مدنظر</label><textarea class="form-control" id="reqDesc" rows="2"></textarea></div>
 </div><div class="modal-footer"><button type="button" class="btn-secondary" onclick="App.closeModal('request')">انصراف</button><button type="submit" class="btn-primary">ثبت متقاضی</button></div></form></div></div>
 
-<!-- BANK CARD MODAL -->
 <div class="modal-overlay" id="bankCardModal"><div class="modal-box" style="max-width:450px"><div class="modal-header header-finance"><h3><i class="fa-solid fa-credit-card"></i> افزودن حساب بانکی</h3><button class="action-btn" onclick="App.closeModal('bankCard')"><i class="fa-solid fa-xmark"></i></button></div>
 <form id="bankCardForm"><div class="modal-body">
 <div class="form-group"><label>عنوان حساب</label><input type="text" class="form-control" id="cardTitle" required></div>
@@ -590,7 +584,6 @@ body.dark-mode .app-footer{background:var(--sidebar-bg-dark);color:#94a3b8;borde
 <div class="form-group"><label>موجودی اولیه (تومان)</label><input type="text" class="form-control money-field" id="cardBalance" value="0" required></div>
 </div><div class="modal-footer"><button type="button" class="btn-secondary" onclick="App.closeModal('bankCard')">انصراف</button><button type="submit" class="btn-primary">ذخیره</button></div></form></div></div>
 
-<!-- TRANSACTION MODAL -->
 <div class="modal-overlay" id="transactionModal"><div class="modal-box" style="max-width:500px"><div class="modal-header header-finance"><h3><i class="fa-solid fa-money-bill-transfer"></i> ثبت تراکنش مالی</h3><button class="action-btn" onclick="App.closeModal('transaction')"><i class="fa-solid fa-xmark"></i></button></div>
 <form id="transactionForm"><div class="modal-body">
 <div class="form-group"><label>حساب بانکی</label><select class="form-control" id="transCardId" required></select></div>
@@ -605,7 +598,6 @@ body.dark-mode .app-footer{background:var(--sidebar-bg-dark);color:#94a3b8;borde
 <div style="margin-top:4px"><label style="font-size:.7rem">وضعیت سهم همکار:</label><select class="form-control" id="transColleagueStatus"><option value="پرداخت نشده">پرداخت نشده</option><option value="پرداخت شده">پرداخت شده</option></select></div></div>
 </div><div class="modal-footer"><button type="button" class="btn-secondary" onclick="App.closeModal('transaction')">انصراف</button><button type="submit" class="btn-primary">ثبت سند مالی</button></div></form></div></div>
 
-<!-- COMMISSION CALCULATOR (STANDALONE) -->
 <div class="modal-overlay" id="commissionCalcModal"><div class="modal-box" style="max-width:580px"><div class="modal-header header-finance"><h3><i class="fa-solid fa-calculator"></i> ماشین‌حساب کمیسیون صنف املاک (اطلاعاتی)</h3><button class="action-btn" onclick="App.closeModal('commissionCalc')"><i class="fa-solid fa-xmark"></i></button></div>
 <div class="modal-body">
 <div class="form-group"><label>نوع معامله</label><select class="form-control" id="calcDealType" onchange="App.calcStandaloneCommission()"><option value="sale">خرید و فروش</option><option value="rent">رهن و اجاره</option></select></div>
@@ -621,7 +613,6 @@ body.dark-mode .app-footer{background:var(--sidebar-bg-dark);color:#94a3b8;borde
 </div>
 <div class="modal-footer"><button type="button" class="btn-secondary" onclick="App.closeModal('commissionCalc')">بستن</button></div></div></div>
 
-<!-- CONTRACT FINALIZATION MODAL -->
 <div class="modal-overlay" id="contractModal"><div class="modal-box" style="max-width:580px"><div class="modal-header header-contract"><h3><i class="fa-solid fa-file-signature"></i> نهایی‌سازی قرارداد و محاسبه کمیسیون</h3><button class="action-btn" onclick="App.closeModal('contract')"><i class="fa-solid fa-xmark"></i></button></div>
 <div class="modal-body">
 <div id="contractPropertyInfo" style="margin-bottom:15px"></div>
@@ -635,16 +626,13 @@ body.dark-mode .app-footer{background:var(--sidebar-bg-dark);color:#94a3b8;borde
 <button type="button" class="btn-primary" onclick="App.registerContractTransaction()"><i class="fa-solid fa-money-bill-transfer"></i> ثبت تراکنش</button>
 </div></div></div>
 
-<!-- SEARCH RESULTS MODAL -->
 <div class="modal-overlay" id="searchResultsModal"><div class="modal-box" style="max-width:700px"><div class="modal-header header-search"><h3 id="searchResultsTitle"><i class="fa-solid fa-magnifying-glass"></i> نتایج جستجو</h3><button class="action-btn" onclick="App.closeModal('searchResults')"><i class="fa-solid fa-xmark"></i></button></div>
 <div class="modal-body" id="searchResultsBody"></div>
 <div class="modal-footer"><button type="button" class="btn-secondary" onclick="App.closeModal('searchResults')">بستن</button></div></div></div>
 
-<!-- DETAIL MODAL -->
 <div class="modal-overlay" id="detailModal"><div class="modal-box" style="max-width:700px"><div class="modal-header" id="detailModalHeader"><h3 id="detailModalTitle"><i class="fa-solid fa-circle-info"></i> جزئیات</h3><button class="action-btn" onclick="App.closeModal('detail')"><i class="fa-solid fa-xmark"></i></button></div>
 <div class="modal-body" id="detailModalBody"></div><div class="modal-footer" id="detailModalFooter"></div></div></div>
 
-<!-- ALARM MODAL -->
 <div class="modal-overlay" id="alarmModal"><div class="modal-box" style="max-width:450px"><div class="modal-header header-alarm"><h3><i class="fa-solid fa-bell"></i> تنظیم آلارم</h3><button class="action-btn" onclick="App.closeModal('alarm')"><i class="fa-solid fa-xmark"></i></button></div>
 <form id="alarmForm"><input type="hidden" id="alarmItemType"><input type="hidden" id="alarmItemId">
 <div class="modal-body">
@@ -663,27 +651,22 @@ body.dark-mode .app-footer{background:var(--sidebar-bg-dark);color:#94a3b8;borde
 <div id="alarmListContainer" style="margin-top:12px"></div>
 </div><div class="modal-footer"><button type="button" class="btn-secondary" onclick="App.closeModal('alarm')">بستن</button><button type="submit" class="btn-primary"><i class="fa-solid fa-bell"></i> ذخیره آلارم</button></div></form></div></div>
 
-<!-- CRM MODAL -->
 <div class="modal-overlay" id="crmTimelineModal"><div class="modal-box"><div class="modal-header header-info"><h3><i class="fa-solid fa-history"></i> پرونده الکترونیک مشتری</h3><button class="action-btn" onclick="App.closeModal('crmTimeline')"><i class="fa-solid fa-xmark"></i></button></div>
 <div class="modal-body"><div style="font-weight:800;font-size:1rem;margin-bottom:12px" id="crmCustomerTitle">نام مشتری</div>
 <form id="crmLogForm" style="margin-bottom:18px"><input type="hidden" id="crmCustomerId"><div class="form-group"><label>ثبت اقدام جدید</label><textarea class="form-control" id="crmLogDesc" rows="2" placeholder="جزییات..." required></textarea></div><button type="submit" class="btn-primary" style="margin-right:auto">ثبت رویداد</button></form>
 <div class="card-header">⏳ تاریخچه رویدادها:</div><div class="timeline-wrapper" id="crmTimelineContent"></div></div></div></div>
 
-<!-- REMINDER MODAL -->
 <div class="modal-overlay" id="reminderModal"><div class="modal-box" style="max-width:400px"><div class="modal-header header-alarm"><h3><i class="fa-solid fa-clock"></i> یادآوری</h3><button class="action-btn" onclick="App.closeModal('reminder')"><i class="fa-solid fa-xmark"></i></button></div>
 <form id="reminderForm"><div class="modal-body"><div class="form-group"><label>عنوان</label><input type="text" class="form-control" id="remTitle" required></div><div class="form-group"><label>زمان</label><input type="text" class="form-control" id="remTime" placeholder="فردا ساعت ۱۸:۰۰" required></div></div><div class="modal-footer"><button type="button" class="btn-secondary" onclick="App.closeModal('reminder')">انصراف</button><button type="submit" class="btn-primary">ذخیره</button></div></form></div></div>
 
-<!-- FLOATING NOTE MODAL -->
 <div class="modal-overlay" id="floatingNoteModal"><div class="modal-box" style="max-width:400px"><div class="modal-header header-settings"><h3><i class="fa-solid fa-sticky-note"></i> یادداشت حساب</h3><button class="action-btn" onclick="App.closeModal('floatingNote')"><i class="fa-solid fa-xmark"></i></button></div>
 <form id="floatingNoteForm"><input type="hidden" id="noteCardId"><div class="modal-body"><div class="form-group"><label>متن یادداشت</label><textarea class="form-control" id="noteText" rows="5"></textarea></div></div><div class="modal-footer"><button type="button" class="btn-secondary" onclick="App.closeModal('floatingNote')">انصراف</button><button type="submit" class="btn-primary">ذخیره</button></div></form></div></div>
 
-<!-- SEASONAL VAT MODAL -->
 <div class="modal-overlay" id="seasonalVATModal"><div class="modal-box" style="max-width:700px"><div class="modal-header header-finance"><h3><i class="fa-solid fa-chart-bar"></i> گزارش ارزش افزوده فصلی</h3><button class="action-btn" onclick="App.closeModal('seasonalVAT')"><i class="fa-solid fa-xmark"></i></button></div>
 <div class="modal-body"><div class="vat-seasons-grid" id="vatSeasonsGrid"></div>
 <div class="dashboard-card" style="margin-top:12px"><div class="card-header">📋 جزئیات</div><div style="overflow-x:auto"><table style="width:100%;border-collapse:collapse;font-size:.8rem"><thead><tr style="border-bottom:2px solid var(--border-light)"><th style="padding:6px">فصل</th><th style="padding:6px">عنوان</th><th style="padding:6px">کمیسیون</th><th style="padding:6px">ارزش افزوده</th></tr></thead><tbody id="vatDetailsBody"></tbody></table></div></div></div>
 <div class="modal-footer"><button type="button" class="btn-secondary" onclick="App.closeModal('seasonalVAT')">بستن</button></div></div></div>
 
-<!-- ABOUT MODAL -->
 <div class="modal-overlay" id="aboutModal"><div class="modal-box" style="max-width:600px"><div class="modal-header header-info"><h3><i class="fa-solid fa-circle-info"></i> درباره فایلینکس</h3><button class="action-btn" onclick="App.closeModal('about')"><i class="fa-solid fa-xmark"></i></button></div>
 <div class="modal-body about-content">
 <p>فایلینکس یک راهکار جامع، مستقل و مدرن برای مدیریت، کارشناسی و اتوماسیون فرآیندهای آژانس‌های املاک و مشاورین حرفه‌ای مسکن است.</p>
@@ -714,16 +697,19 @@ body.dark-mode .app-footer{background:var(--sidebar-bg-dark);color:#94a3b8;borde
 
 <script>
 let db;
-const DB_NAME = 'FilelinxDB';
-const DB_VERSION = 2;
+const DB_NAME = 'FilelinxDB_v4'; // Database updated to fix previous errors
+const DB_VERSION = 1;
 
 function initDB() {
     return new Promise((resolve, reject) => {
         const req = indexedDB.open(DB_NAME, DB_VERSION);
         req.onupgradeneeded = e => {
             const d = e.target.result;
-            ['settings', 'config', 'properties', 'requests', 'bankCards', 'transactions', 'crmLogs', 'reminders', 'agents', 'users'].forEach(s => {
-                if (!d.objectStoreNames.contains(s)) d.createObjectStore(s, { keyPath: 'id', autoIncrement: true });
+            const stores = ['settings', 'config', 'properties', 'requests', 'bankCards', 'transactions', 'crmLogs', 'reminders', 'agents', 'users'];
+            stores.forEach(s => {
+                if (!d.objectStoreNames.contains(s)) {
+                    d.createObjectStore(s, { keyPath: 'id', autoIncrement: true });
+                }
             });
         };
         req.onsuccess = e => resolve(e.target.result);
@@ -1456,20 +1442,26 @@ const App = {
         let props = App.cache.properties.filter(p => p.isArchived);
         const search = (document.getElementById('archiveSearch').value || '').toLowerCase();
         if (search) props = props.filter(p => (p.title || '').toLowerCase().includes(search));
-        grid.innerHTML = props.map(p => `<div class="data-card" style="opacity:.7"><div class="card-body"><div class="card-title-bar"><h4>${p.title || ''}</h4></div><div class="card-meta"><span>${p.type || ''}</span><span>${MoneyHelper.format(p.price)}</span></div></div><div class="card-footer-actions"><button class="btn-icon" title="بازگردانی" onclick="App.unarchiveProperty(${p.id})"><i class="fa-solid fa-rotate-left"></i></button><button class="btn-icon btn-delete" title="حذف دائم" onclick="App.deleteProperty(${p.id})"><i class="fa-solid fa-trash"></i></button></div></div>`).join('') || '<div style="text-align:center;padding:40px;color:#94a3b8">بایگانی خالی است</div>';
+        
+        const html = props.map(p => `<div class="data-card" style="opacity:.7"><div class="card-body"><div class="card-title-bar"><h4>${p.title || ''}</h4></div><div class="card-meta"><span>${p.type || ''}</span><span>${MoneyHelper.format(p.price)}</span></div></div><div class="card-footer-actions"><button class="btn-icon" title="بازگردانی" onclick="App.unarchiveProperty(${p.id})"><i class="fa-solid fa-rotate-left"></i></button><button class="btn-icon btn-delete" title="حذف دائم" onclick="App.deleteProperty(${p.id})"><i class="fa-solid fa-trash"></i></button></div></div>`).join('');
+        grid.innerHTML = html || '<div style="text-align:center;padding:40px;color:#94a3b8">بایگانی خالی است</div>';
     },
 
     renderBanking: async () => {
         const cards = await dbOps.getAll('bankCards');
         const trans = await dbOps.getAll('transactions');
-        document.getElementById('bankCardsGrid').innerHTML = cards.map(c => `<div class="data-card"><div class="card-body"><div class="card-title-bar"><h4><i class="fa-solid fa-credit-card" style="color:#eab308"></i> ${c.title}</h4></div><div class="card-meta"><span><i class="fa-solid fa-hashtag"></i> ${c.number}</span><span><i class="fa-solid fa-user"></i> ${c.owner}</span></div><div style="font-size:1.1rem;font-weight:900;color:var(--accent);margin-top:6px">${MoneyHelper.format(c.balance)} تومان</div></div><div class="card-footer-actions"><button class="btn-icon" title="یادداشت" onclick="App.openFloatingNote(${c.id})"><i class="fa-solid fa-sticky-note"></i></button><button class="btn-icon btn-delete" title="حذف" onclick="App.deleteBankCard(${c.id})"><i class="fa-solid fa-trash"></i></button></div></div>`).join('') || '<div style="text-align:center;padding:20px;color:#94a3b8">کارتی ثبت نشده</div>';
+        
+        const cardsHtml = cards.map(c => `<div class="data-card"><div class="card-body"><div class="card-title-bar"><h4><i class="fa-solid fa-credit-card" style="color:#eab308"></i> ${c.title}</h4></div><div class="card-meta"><span><i class="fa-solid fa-hashtag"></i> ${c.number}</span><span><i class="fa-solid fa-user"></i> ${c.owner}</span></div><div style="font-size:1.1rem;font-weight:900;color:var(--accent);margin-top:6px">${MoneyHelper.format(c.balance)} تومان</div></div><div class="card-footer-actions"><button class="btn-icon" title="یادداشت" onclick="App.openFloatingNote(${c.id})"><i class="fa-solid fa-sticky-note"></i></button><button class="btn-icon btn-delete" title="حذف" onclick="App.deleteBankCard(${c.id})"><i class="fa-solid fa-trash"></i></button></div></div>`).join('');
+        document.getElementById('bankCardsGrid').innerHTML = cardsHtml || '<div style="text-align:center;padding:20px;color:#94a3b8">کارتی ثبت نشده</div>';
 
-        document.getElementById('transactionsList').innerHTML = trans.map(t => `<tr style="border-bottom:1px solid var(--border-light)"><td style="padding:6px"><span style="background:${t.type === 'درآمد' ? 'rgba(16,185,129,.15)' : 'rgba(239,68,68,.15)'};color:${t.type === 'درآمد' ? '#059669' : '#ef4444'};padding:2px 8px;border-radius:6px;font-size:.75rem;font-weight:700">${t.type}</span></td><td style="padding:6px">${t.title || ''}</td><td style="padding:6px;font-weight:700">${MoneyHelper.format(t.amount)}</td><td style="padding:6px">${t.propertyName || '-'}</td><td style="padding:6px">${t.colleagueStatus || '-'}</td><td style="padding:6px"><button class="btn-icon btn-delete" style="width:28px;height:28px" title="حذف" onclick="App.deleteTransaction(${t.id})"><i class="fa-solid fa-trash"></i></button></td></tr>`).join('') || '<tr><td colspan="6" style="text-align:center;padding:15px;color:#94a3b8">تراکنشی ثبت نشده</td></tr>';
+        const transHtml = trans.map(t => `<tr style="border-bottom:1px solid var(--border-light)"><td style="padding:6px"><span style="background:${t.type === 'درآمد' ? 'rgba(16,185,129,.15)' : 'rgba(239,68,68,.15)'};color:${t.type === 'درآمد' ? '#059669' : '#ef4444'};padding:2px 8px;border-radius:6px;font-size:.75rem;font-weight:700">${t.type}</span></td><td style="padding:6px">${t.title || ''}</td><td style="padding:6px;font-weight:700">${MoneyHelper.format(t.amount)}</td><td style="padding:6px">${t.propertyName || '-'}</td><td style="padding:6px">${t.colleagueStatus || '-'}</td><td style="padding:6px"><button class="btn-icon btn-delete" style="width:28px;height:28px" title="حذف" onclick="App.deleteTransaction(${t.id})"><i class="fa-solid fa-trash"></i></button></td></tr>`).join('');
+        document.getElementById('transactionsList').innerHTML = transHtml || '<tr><td colspan="6" style="text-align:center;padding:15px;color:#94a3b8">تراکنشی ثبت نشده</td></tr>';
     },
 
     renderAgents: async () => {
         const agents = await dbOps.getAll('agents');
-        document.getElementById('agentsListContainer').innerHTML = agents.map(a => `<div class="agent-row"><span><i class="fa-solid fa-user-tie" style="color:var(--primary);margin-left:4px"></i> ${a.name} (${a.username}) - <strong>${a.role === 'admin' ? 'مدیر' : 'مشاور'}</strong></span><button class="btn-icon btn-delete" style="width:28px;height:28px" onclick="App.removeAgent(${a.id})"><i class="fa-solid fa-trash"></i></button></div>`).join('') || '<span style="color:#94a3b8;font-size:.8rem">مشاوری ثبت نشده</span>';
+        const html = agents.map(a => `<div class="agent-row"><span><i class="fa-solid fa-user-tie" style="color:var(--primary);margin-left:4px"></i> ${a.name} (${a.username}) - <strong>${a.role === 'admin' ? 'مدیر' : 'مشاور'}</strong></span><button class="btn-icon btn-delete" style="width:28px;height:28px" onclick="App.removeAgent(${a.id})"><i class="fa-solid fa-trash"></i></button></div>`).join('');
+        document.getElementById('agentsListContainer').innerHTML = html || '<span style="color:#94a3b8;font-size:.8rem">مشاوری ثبت نشده</span>';
     },
 
     editProperty: async id => {
@@ -1617,7 +1609,8 @@ const App = {
         document.getElementById('crmCustomerTitle').textContent = name;
         document.getElementById('crmCustomerId').value = type + '_' + id;
         const logs = (await dbOps.getAll('crmLogs')).filter(l => l.entityId === type + '_' + id);
-        document.getElementById('crmTimelineContent').innerHTML = logs.sort((a, b) => b.id - a.id).map(l => `<div class="timeline-item"><div class="timeline-date">${l.date || ''}</div><div>${l.desc || ''}</div></div>`).join('') || '<div style="color:#94a3b8;font-size:.78rem">رویدادی ثبت نشده</div>';
+        const html = logs.sort((a, b) => b.id - a.id).map(l => `<div class="timeline-item"><div class="timeline-date">${l.date || ''}</div><div>${l.desc || ''}</div></div>`).join('');
+        document.getElementById('crmTimelineContent').innerHTML = html || '<div style="color:#94a3b8;font-size:.78rem">رویدادی ثبت نشده</div>';
         App.openModal('crmTimeline');
     },
     openFloatingNote: async cardId => {
@@ -1695,71 +1688,42 @@ const App = {
     },
 
     init: async () => {
-        db = await initDB();
-        await App.ensureConfig();
-        await App.refreshCache();
-        const sf = localStorage.getItem('flx_font');
-        if (sf) App.changeFont(sf);
-        if (localStorage.getItem('flx_dark') === 'true') document.body.classList.add('dark-mode');
+        try {
+            db = await initDB();
+            await App.ensureConfig();
+            await App.refreshCache();
+            const sf = localStorage.getItem('flx_font');
+            if (sf) App.changeFont(sf);
+            if (localStorage.getItem('flx_dark') === 'true') document.body.classList.add('dark-mode');
 
-        // Signup Logic
-        document.getElementById('signupForm').addEventListener('submit', async e => {
-            e.preventDefault();
-            const username = document.getElementById('signupUsername').value.trim();
-            const pass = document.getElementById('signupPass').value;
-            const ans = document.getElementById('signupAnswer').value.trim();
-            
-            const users = await dbOps.getAll('users');
-            if (users.find(u => u.username === username)) {
-                Swal.fire('خطا', 'این نام کاربری قبلا ثبت شده است', 'error');
-                return;
-            }
-            
-            await dbOps.add('users', { username: username, password: pass, answer: ans });
-            Swal.fire({ icon: 'success', title: 'ثبت‌نام موفق!', text: 'اکنون می‌توانید وارد شوید', timer: 2000, showConfirmButton: false });
-            App.showLogin();
-            document.getElementById('loginUser').value = username;
-        });
-
-        // Login Logic
-        document.getElementById('loginForm').addEventListener('submit', async e => {
-            e.preventDefault();
-            const username = document.getElementById('loginUser').value;
-            const password = document.getElementById('loginPass').value;
-            
-            const users = await dbOps.getAll('users');
-            let logged = users.find(u => u.username === username && u.password === password);
-            
-            // Support legacy settings store if exists
-            if (!logged) {
-                const s = await dbOps.get('settings', 1);
-                if (s && username === s.username && password === s.password) {
-                    // Migrate legacy to users store
-                    if (!users.find(u => u.username === s.username)) {
-                        await dbOps.add('users', { username: s.username, password: s.password, answer: s.securityAnswer });
-                    }
-                    logged = { username: s.username, password: s.password, answer: s.securityAnswer };
+            // Signup Logic
+            document.getElementById('signupForm').addEventListener('submit', async e => {
+                e.preventDefault();
+                const username = document.getElementById('signupUsername').value.trim();
+                const pass = document.getElementById('signupPass').value;
+                const ans = document.getElementById('signupAnswer').value.trim();
+                
+                const users = await dbOps.getAll('users');
+                if (users.find(u => u.username === username)) {
+                    Swal.fire('خطا', 'این نام کاربری قبلا ثبت شده است', 'error');
+                    return;
                 }
-            }
-
-            const agents = await dbOps.getAll('agents');
-            if (!logged) {
-                const ag = agents.find(a => a.username === username && a.password === password);
-                if (ag) logged = { username: ag.username, password: ag.password, name: ag.name, role: ag.role };
-            }
-
-            if (logged) {
-                App.currentUser = logged;
-                App.currentUsername = logged.username;
+                
+                const newUserId = await dbOps.add('users', { username: username, password: pass, answer: ans });
+                
+                // Auto-login after signup
+                App.currentUser = { id: newUserId, username: username, password: pass, answer: ans };
+                App.currentUsername = username;
                 document.getElementById('authOverlay').style.display = 'none';
-                document.getElementById('headerUser').textContent = logged.name || logged.username || 'مدیر سیستم';
-                document.getElementById('userInitial').textContent = (logged.name || logged.username || 'مد').substring(0, 2);
+                document.getElementById('headerUser').textContent = username;
+                document.getElementById('userInitial').textContent = username.substring(0, 2);
+                
                 const cfg = await dbOps.get('config', 1);
                 if (cfg) {
                     App.settings.agencyName = cfg.agencyName;
                     document.getElementById('headerAgency').textContent = cfg.agencyName;
-                    document.getElementById('headerPhone').textContent = cfg.agencyPhone || '';
                 }
+                
                 App.checkSavedLicense();
                 App.renderConfigPanels();
                 App.renderDashboard();
@@ -1769,278 +1733,336 @@ const App = {
                 App.renderBanking();
                 App.renderAgents();
                 App.startReminderEngine();
-                setTimeout(() => App.checkSeasonalAlarm(), 5000);
-            } else {
-                Swal.fire('خطا', 'نام کاربری یا رمز عبور اشتباه است', 'error');
-            }
-        });
 
-        // Recovery Logic
-        document.getElementById('recoveryForm').addEventListener('submit', async e => {
-            e.preventDefault();
-            const username = document.getElementById('recoveryUser').value.trim();
-            const answer = document.getElementById('recoveryAnswer').value.trim();
-            const newPass = document.getElementById('recoveryNewPass').value;
-            
-            const users = await dbOps.getAll('users');
-            const user = users.find(u => u.username === username);
-            
-            if (user && user.answer === answer) {
-                user.password = newPass;
-                await dbOps.put('users', user);
-                Swal.fire({ icon: 'success', title: 'رمز تغییر کرد', text: 'اکنون می‌توانید با رمز جدید وارد شوید', timer: 2000, showConfirmButton: false });
-                App.showLogin();
-            } else {
-                Swal.fire('خطا', 'نام کاربری یا پاسخ امنیتی اشتباه است', 'error');
-            }
-        });
+                Swal.fire({ icon: 'success', title: 'ثبت‌نام با موفقیت انجام شد!', text: 'شما اکنون وارد سیستم شده‌اید.', timer: 2000, showConfirmButton: false });
+            });
 
-        document.getElementById('propertyForm').addEventListener('submit', async e => {
-            e.preventDefault();
-            const id = document.getElementById('propertyId').value;
-            const features = [];
-            document.querySelectorAll('#propFeaturesContainer .tag-check:checked').forEach(cb => features.push(cb.value));
-            const deal = document.getElementById('propDealSelect').value;
-            const data = {
-                ownerName: document.getElementById('propOwnerName').value,
-                ownerPhone: document.getElementById('propOwnerPhone').value,
-                title: document.getElementById('propTitle').value,
-                type: document.getElementById('propTypeSelect').value,
-                deal: deal,
-                price: MoneyHelper.toNumber(document.getElementById('propPrice').value),
-                rent: (deal && (deal.includes('رهن') || deal.includes('اجاره'))) ? MoneyHelper.toNumber(document.getElementById('propRent').value) : 0,
-                area: document.getElementById('propArea').value,
-                address: document.getElementById('propAddress').value,
-                features: features,
-                featuresCustom: document.getElementById('propFeaturesCustom').value,
-                buildYear: document.getElementById('propBuildYear').value,
-                date: document.getElementById('propDate').value || App.getSystemPersianDateTime().date,
-                margin: document.getElementById('propMargin').value,
-                streetWidth: document.getElementById('propStreetWidth').value,
-                colleagueName: document.getElementById('propColleagueName').value,
-                colleaguePhone: document.getElementById('propColleaguePhone').value,
-                colleagueOffice: document.getElementById('propColleagueOffice').value,
-                desc: document.getElementById('propDesc').value,
-                images: JSON.parse(document.getElementById('propImages').value || '[]'),
-                status: document.getElementById('propStatus').value,
-                isArchived: false,
-                createdBy: App.currentUsername
-            };
-            if (id) {
-                const existing = await dbOps.get('properties', parseInt(id));
-                if (existing) {
-                    data.alarms = existing.alarms || [];
-                    data.id = parseInt(id);
+            // Login Logic
+            document.getElementById('loginForm').addEventListener('submit', async e => {
+                e.preventDefault();
+                const username = document.getElementById('loginUser').value;
+                const password = document.getElementById('loginPass').value;
+                
+                const users = await dbOps.getAll('users');
+                let logged = users.find(u => u.username === username && u.password === password);
+                
+                // Support legacy settings store if exists
+                if (!logged) {
+                    const s = await dbOps.get('settings', 1);
+                    if (s && username === s.username && password === s.password) {
+                        if (!users.find(u => u.username === s.username)) {
+                            await dbOps.add('users', { username: s.username, password: s.password, answer: s.securityAnswer });
+                        }
+                        logged = { username: s.username, password: s.password, answer: s.securityAnswer };
+                    }
                 }
-                await dbOps.put('properties', data);
-            } else {
-                await dbOps.add('properties', data);
-            }
-            document.getElementById('propertyForm').reset();
-            document.getElementById('propertyId').value = '';
-            document.getElementById('propImages').value = '';
-            App.renderPhotoPreview();
-            App.closeModal('property');
-            App.renderProperties();
-            App.renderDashboard();
-            Swal.fire({ icon: 'success', title: 'ملک ذخیره شد', timer: 1500, showConfirmButton: false });
-        });
 
-        document.getElementById('requestForm').addEventListener('submit', async e => {
-            e.preventDefault();
-            const id = document.getElementById('requestId').value;
-            const features = [];
-            document.querySelectorAll('#reqFeaturesContainer .tag-check:checked').forEach(cb => features.push(cb.value));
-            const deal = document.getElementById('reqDealSelect').value;
-            const data = {
-                name: document.getElementById('reqName').value,
-                phone: document.getElementById('reqPhone').value,
-                type: document.getElementById('reqTypeSelect').value,
-                deal: deal,
-                budget: MoneyHelper.toNumber(document.getElementById('reqBudget').value),
-                rent: (deal && (deal.includes('رهن') || deal.includes('اجاره'))) ? MoneyHelper.toNumber(document.getElementById('reqRent').value) : 0,
-                area: document.getElementById('reqArea').value,
-                buildYear: document.getElementById('reqBuildYear').value,
-                date: document.getElementById('reqDate').value || App.getSystemPersianDateTime().date,
-                margin: document.getElementById('reqMargin').value,
-                streetWidth: document.getElementById('reqStreetWidth').value,
-                features: features,
-                featuresCustom: document.getElementById('reqFeaturesCustom').value,
-                desc: document.getElementById('reqDesc').value,
-                createdBy: App.currentUsername
-            };
-            if (id) {
-                const existing = await dbOps.get('requests', parseInt(id));
-                if (existing) {
-                    data.alarms = existing.alarms || [];
-                    data.id = parseInt(id);
+                const agents = await dbOps.getAll('agents');
+                if (!logged) {
+                    const ag = agents.find(a => a.username === username && a.password === password);
+                    if (ag) logged = { username: ag.username, password: ag.password, name: ag.name, role: ag.role };
                 }
-                await dbOps.put('requests', data);
-            } else {
-                await dbOps.add('requests', data);
-            }
-            document.getElementById('requestForm').reset();
-            document.getElementById('requestId').value = '';
-            App.closeModal('request');
-            App.renderRequests();
-            App.renderDashboard();
-            Swal.fire({ icon: 'success', title: 'متقاضی ذخیره شد', timer: 1500, showConfirmButton: false });
-        });
 
-        document.getElementById('bankCardForm').addEventListener('submit', async e => {
-            e.preventDefault();
-            await dbOps.add('bankCards', {
-                title: document.getElementById('cardTitle').value,
-                number: document.getElementById('cardNumber').value,
-                owner: document.getElementById('cardOwner').value,
-                balance: MoneyHelper.toNumber(document.getElementById('cardBalance').value),
-                note: ''
-            });
-            document.getElementById('bankCardForm').reset();
-            App.closeModal('bankCard');
-            App.renderBanking();
-        });
-
-        document.getElementById('transactionForm').addEventListener('submit', async e => {
-            e.preventDefault();
-            const propId = document.getElementById('transPropertyId').value;
-            let propertyName = '', colleagueStatus = '';
-            if (propId) {
-                const prop = await dbOps.get('properties', parseInt(propId));
-                if (prop) {
-                    propertyName = prop.title;
-                    if (prop.colleagueName) colleagueStatus = document.getElementById('transColleagueStatus').value;
+                if (logged) {
+                    App.currentUser = logged;
+                    App.currentUsername = logged.username;
+                    document.getElementById('authOverlay').style.display = 'none';
+                    document.getElementById('headerUser').textContent = logged.name || logged.username || 'مدیر سیستم';
+                    document.getElementById('userInitial').textContent = (logged.name || logged.username || 'مد').substring(0, 2);
+                    const cfg = await dbOps.get('config', 1);
+                    if (cfg) {
+                        App.settings.agencyName = cfg.agencyName;
+                        document.getElementById('headerAgency').textContent = cfg.agencyName;
+                        document.getElementById('headerPhone').textContent = cfg.agencyPhone || '';
+                    }
+                    App.checkSavedLicense();
+                    App.renderConfigPanels();
+                    App.renderDashboard();
+                    App.renderProperties();
+                    App.renderRequests();
+                    App.renderArchive();
+                    App.renderBanking();
+                    App.renderAgents();
+                    App.startReminderEngine();
+                    setTimeout(() => App.checkSeasonalAlarm(), 5000);
+                    Swal.fire({ icon: 'success', title: 'ورود با موفقیت انجام شد!', timer: 1500, showConfirmButton: false });
+                } else {
+                    Swal.fire('خطا', 'نام کاربری یا رمز عبور اشتباه است', 'error');
                 }
-            }
-            const amount = MoneyHelper.toNumber(document.getElementById('transAmount').value);
-            const vatAmount = document.getElementById('transType').value === 'درآمد' ? Math.round(amount * .10) : 0;
-            await dbOps.add('transactions', {
-                cardId: document.getElementById('transCardId').value,
-                type: document.getElementById('transType').value,
-                amount: amount,
-                title: document.getElementById('transTitle').value,
-                propertyId: propId,
-                propertyName: propertyName,
-                colleagueStatus: colleagueStatus,
-                vatAmount: vatAmount,
-                date: App.getSystemPersianDateTime().date
             });
-            const card = await dbOps.get('bankCards', parseInt(document.getElementById('transCardId').value));
-            if (card) {
-                card.balance = document.getElementById('transType').value === 'درآمد' ? card.balance + amount : card.balance - amount;
-                await dbOps.put('bankCards', card);
-            }
-            document.getElementById('transactionForm').reset();
-            App.closeModal('transaction');
-            App.renderBanking();
-            Swal.fire({ icon: 'success', title: 'تراکنش ثبت شد', timer: 1500, showConfirmButton: false });
-        });
 
-        document.getElementById('alarmForm').addEventListener('submit', async e => {
-            e.preventDefault();
-            const type = document.getElementById('alarmItemType').value;
-            const id = parseInt(document.getElementById('alarmItemId').value);
-            const sn = type === 'property' ? 'properties' : 'requests';
-            const item = await dbOps.get(sn, id);
-            if (!item) return;
-            if (!item.alarms) item.alarms = [];
-            item.alarms.push({
-                title: document.getElementById('alarmTitle').value,
-                description: document.getElementById('alarmDesc').value,
-                date: document.getElementById('alarmDate').value,
-                time: document.getElementById('alarmTime').value,
-                soundType: document.getElementById('alarmSoundType').value,
-                isTriggered: false
+            // Recovery Logic
+            document.getElementById('recoveryForm').addEventListener('submit', async e => {
+                e.preventDefault();
+                const username = document.getElementById('recoveryUser').value.trim();
+                const answer = document.getElementById('recoveryAnswer').value.trim();
+                const newPass = document.getElementById('recoveryNewPass').value;
+                
+                const users = await dbOps.getAll('users');
+                const user = users.find(u => u.username === username);
+                
+                if (user && user.answer === answer) {
+                    user.password = newPass;
+                    await dbOps.put('users', user);
+                    Swal.fire({ icon: 'success', title: 'رمز عبور با موفقیت تغییر کرد', text: 'اکنون می‌توانید با رمز جدید وارد شوید', timer: 2000, showConfirmButton: false });
+                    App.showLogin();
+                } else {
+                    Swal.fire('خطا', 'نام کاربری یا پاسخ امنیتی اشتباه است', 'error');
+                }
             });
-            await dbOps.put(sn, item);
-            App.closeModal('alarm');
-            App.renderProperties();
-            App.renderRequests();
-            App.renderDashboard();
-            Swal.fire({ icon: 'success', title: 'آلارم ذخیره شد', timer: 1500, showConfirmButton: false });
-        });
 
-        document.getElementById('crmLogForm').addEventListener('submit', async e => {
-            e.preventDefault();
-            await dbOps.add('crmLogs', {
-                entityId: document.getElementById('crmCustomerId').value,
-                desc: document.getElementById('crmLogDesc').value,
-                date: App.getSystemPersianDateTime().date + ' ' + App.getSystemPersianDateTime().time
+            document.getElementById('propertyForm').addEventListener('submit', async e => {
+                e.preventDefault();
+                const id = document.getElementById('propertyId').value;
+                const features = [];
+                document.querySelectorAll('#propFeaturesContainer .tag-check:checked').forEach(cb => features.push(cb.value));
+                const deal = document.getElementById('propDealSelect').value;
+                const data = {
+                    ownerName: document.getElementById('propOwnerName').value,
+                    ownerPhone: document.getElementById('propOwnerPhone').value,
+                    title: document.getElementById('propTitle').value,
+                    type: document.getElementById('propTypeSelect').value,
+                    deal: deal,
+                    price: MoneyHelper.toNumber(document.getElementById('propPrice').value),
+                    rent: (deal && (deal.includes('رهن') || deal.includes('اجاره'))) ? MoneyHelper.toNumber(document.getElementById('propRent').value) : 0,
+                    area: document.getElementById('propArea').value,
+                    address: document.getElementById('propAddress').value,
+                    features: features,
+                    featuresCustom: document.getElementById('propFeaturesCustom').value,
+                    buildYear: document.getElementById('propBuildYear').value,
+                    date: document.getElementById('propDate').value || App.getSystemPersianDateTime().date,
+                    margin: document.getElementById('propMargin').value,
+                    streetWidth: document.getElementById('propStreetWidth').value,
+                    colleagueName: document.getElementById('propColleagueName').value,
+                    colleaguePhone: document.getElementById('propColleaguePhone').value,
+                    colleagueOffice: document.getElementById('propColleagueOffice').value,
+                    desc: document.getElementById('propDesc').value,
+                    images: JSON.parse(document.getElementById('propImages').value || '[]'),
+                    status: document.getElementById('propStatus').value,
+                    isArchived: false,
+                    createdBy: App.currentUsername
+                };
+                if (id) {
+                    const existing = await dbOps.get('properties', parseInt(id));
+                    if (existing) {
+                        data.alarms = existing.alarms || [];
+                        data.id = parseInt(id);
+                    }
+                    await dbOps.put('properties', data);
+                } else {
+                    await dbOps.add('properties', data);
+                }
+                document.getElementById('propertyForm').reset();
+                document.getElementById('propertyId').value = '';
+                document.getElementById('propImages').value = '';
+                App.renderPhotoPreview();
+                App.closeModal('property');
+                App.renderProperties();
+                App.renderDashboard();
+                Swal.fire({ icon: 'success', title: 'ملک ذخیره شد', timer: 1500, showConfirmButton: false });
             });
-            document.getElementById('crmLogDesc').value = '';
-            const eid = document.getElementById('crmCustomerId').value;
-            const logs = (await dbOps.getAll('crmLogs')).filter(l => l.entityId === eid);
-            document.getElementById('crmTimelineContent').innerHTML = logs.sort((a, b) => b.id - a.id).map(l => `<div class="timeline-item"><div class="timeline-date">${l.date || ''}</div><div>${l.desc || ''}</div></div>`).join('');
-        });
 
-        document.getElementById('reminderForm').addEventListener('submit', async e => {
-            e.preventDefault();
-            await dbOps.add('reminders', { title: document.getElementById('remTitle').value, time: document.getElementById('remTime').value });
-            document.getElementById('reminderForm').reset();
-            App.closeModal('reminder');
-            Swal.fire({ icon: 'success', title: 'یادآوری ذخیره شد', timer: 1500, showConfirmButton: false });
-        });
-
-        document.getElementById('floatingNoteForm').addEventListener('submit', async e => {
-            e.preventDefault();
-            const cid = parseInt(document.getElementById('noteCardId').value);
-            const c = await dbOps.get('bankCards', cid);
-            if (c) {
-                c.note = document.getElementById('noteText').value;
-                await dbOps.put('bankCards', c);
-            }
-            App.closeModal('floatingNote');
-        });
-
-        document.querySelectorAll('.nav-btn,.bottom-nav button').forEach(btn => {
-            btn.addEventListener('click', () => {
-                const v = btn.getAttribute('data-view');
-                document.querySelectorAll('.view-section').forEach(s => s.classList.remove('active'));
-                document.getElementById(v).classList.add('active');
-                document.querySelectorAll('.nav-btn').forEach(n => n.classList.remove('active'));
-                document.querySelectorAll('.bottom-nav button').forEach(n => n.classList.remove('active'));
-                document.querySelector(`.nav-btn[data-view="${v}"]`)?.classList.add('active');
-                btn.classList.add('active');
+            document.getElementById('requestForm').addEventListener('submit', async e => {
+                e.preventDefault();
+                const id = document.getElementById('requestId').value;
+                const features = [];
+                document.querySelectorAll('#reqFeaturesContainer .tag-check:checked').forEach(cb => features.push(cb.value));
+                const deal = document.getElementById('reqDealSelect').value;
+                const data = {
+                    name: document.getElementById('reqName').value,
+                    phone: document.getElementById('reqPhone').value,
+                    type: document.getElementById('reqTypeSelect').value,
+                    deal: deal,
+                    budget: MoneyHelper.toNumber(document.getElementById('reqBudget').value),
+                    rent: (deal && (deal.includes('رهن') || deal.includes('اجاره'))) ? MoneyHelper.toNumber(document.getElementById('reqRent').value) : 0,
+                    area: document.getElementById('reqArea').value,
+                    buildYear: document.getElementById('reqBuildYear').value,
+                    date: document.getElementById('reqDate').value || App.getSystemPersianDateTime().date,
+                    margin: document.getElementById('reqMargin').value,
+                    streetWidth: document.getElementById('reqStreetWidth').value,
+                    features: features,
+                    featuresCustom: document.getElementById('reqFeaturesCustom').value,
+                    desc: document.getElementById('reqDesc').value,
+                    createdBy: App.currentUsername
+                };
+                if (id) {
+                    const existing = await dbOps.get('requests', parseInt(id));
+                    if (existing) {
+                        data.alarms = existing.alarms || [];
+                        data.id = parseInt(id);
+                    }
+                    await dbOps.put('requests', data);
+                } else {
+                    await dbOps.add('requests', data);
+                }
+                document.getElementById('requestForm').reset();
+                document.getElementById('requestId').value = '';
+                App.closeModal('request');
+                App.renderRequests();
+                App.renderDashboard();
+                Swal.fire({ icon: 'success', title: 'متقاضی ذخیره شد', timer: 1500, showConfirmButton: false });
             });
-        });
 
-        document.getElementById('propertySearch').addEventListener('input', App.renderProperties);
-        document.getElementById('requestSearch').addEventListener('input', App.renderRequests);
-        document.getElementById('archiveSearch').addEventListener('input', App.renderArchive);
-        document.getElementById('filterType').addEventListener('change', App.renderProperties);
-        document.getElementById('filterDeal').addEventListener('change', App.renderProperties);
-        document.getElementById('filterMinPrice').addEventListener('input', App.renderProperties);
-        document.getElementById('filterMaxPrice').addEventListener('input', App.renderProperties);
+            document.getElementById('bankCardForm').addEventListener('submit', async e => {
+                e.preventDefault();
+                await dbOps.add('bankCards', {
+                    title: document.getElementById('cardTitle').value,
+                    number: document.getElementById('cardNumber').value,
+                    owner: document.getElementById('cardOwner').value,
+                    balance: MoneyHelper.toNumber(document.getElementById('cardBalance').value),
+                    note: ''
+                });
+                document.getElementById('bankCardForm').reset();
+                App.closeModal('bankCard');
+                App.renderBanking();
+            });
 
-        App.moneyFields.forEach(id => MoneyHelper.attach(id));
+            document.getElementById('transactionForm').addEventListener('submit', async e => {
+                e.preventDefault();
+                const propId = document.getElementById('transPropertyId').value;
+                let propertyName = '', colleagueStatus = '';
+                if (propId) {
+                    const prop = await dbOps.get('properties', parseInt(propId));
+                    if (prop) {
+                        propertyName = prop.title;
+                        if (prop.colleagueName) colleagueStatus = document.getElementById('transColleagueStatus').value;
+                    }
+                }
+                const amount = MoneyHelper.toNumber(document.getElementById('transAmount').value);
+                const vatAmount = document.getElementById('transType').value === 'درآمد' ? Math.round(amount * .10) : 0;
+                await dbOps.add('transactions', {
+                    cardId: document.getElementById('transCardId').value,
+                    type: document.getElementById('transType').value,
+                    amount: amount,
+                    title: document.getElementById('transTitle').value,
+                    propertyId: propId,
+                    propertyName: propertyName,
+                    colleagueStatus: colleagueStatus,
+                    vatAmount: vatAmount,
+                    date: App.getSystemPersianDateTime().date
+                });
+                const card = await dbOps.get('bankCards', parseInt(document.getElementById('transCardId').value));
+                if (card) {
+                    card.balance = document.getElementById('transType').value === 'درآمد' ? card.balance + amount : card.balance - amount;
+                    await dbOps.put('bankCards', card);
+                }
+                document.getElementById('transactionForm').reset();
+                App.closeModal('transaction');
+                App.renderBanking();
+                Swal.fire({ icon: 'success', title: 'تراکنش ثبت شد', timer: 1500, showConfirmButton: false });
+            });
 
-        document.addEventListener('click', e => {
-            if (!e.target.closest('.status-menu-container')) document.querySelectorAll('.status-dropdown').forEach(d => d.style.display = 'none');
-        });
+            document.getElementById('alarmForm').addEventListener('submit', async e => {
+                e.preventDefault();
+                const type = document.getElementById('alarmItemType').value;
+                const id = parseInt(document.getElementById('alarmItemId').value);
+                const sn = type === 'property' ? 'properties' : 'requests';
+                const item = await dbOps.get(sn, id);
+                if (!item) return;
+                if (!item.alarms) item.alarms = [];
+                item.alarms.push({
+                    title: document.getElementById('alarmTitle').value,
+                    description: document.getElementById('alarmDesc').value,
+                    date: document.getElementById('alarmDate').value,
+                    time: document.getElementById('alarmTime').value,
+                    soundType: document.getElementById('alarmSoundType').value,
+                    isTriggered: false
+                });
+                await dbOps.put(sn, item);
+                App.closeModal('alarm');
+                App.renderProperties();
+                App.renderRequests();
+                App.renderDashboard();
+                Swal.fire({ icon: 'success', title: 'آلارم ذخیره شد', timer: 1500, showConfirmButton: false });
+            });
 
-        document.querySelectorAll('.modal-overlay').forEach(o => {
-            o.addEventListener('click', e => { if (e.target === o) o.classList.remove('active'); });
-        });
+            document.getElementById('crmLogForm').addEventListener('submit', async e => {
+                e.preventDefault();
+                await dbOps.add('crmLogs', {
+                    entityId: document.getElementById('crmCustomerId').value,
+                    desc: document.getElementById('crmLogDesc').value,
+                    date: App.getSystemPersianDateTime().date + ' ' + App.getSystemPersianDateTime().time
+                });
+                document.getElementById('crmLogDesc').value = '';
+                const eid = document.getElementById('crmCustomerId').value;
+                const logs = (await dbOps.getAll('crmLogs')).filter(l => l.entityId === eid);
+                const html = logs.sort((a, b) => b.id - a.id).map(l => `<div class="timeline-item"><div class="timeline-date">${l.date || ''}</div><div>${l.desc || ''}</div></div>`).join('');
+                document.getElementById('crmTimelineContent').innerHTML = html;
+            });
 
-        setInterval(() => {
-            const n = new Date();
-            document.getElementById('liveClock').textContent = String(n.getHours()).padStart(2, '0') + ':' + String(n.getMinutes()).padStart(2, '0');
-        }, 1000);
+            document.getElementById('reminderForm').addEventListener('submit', async e => {
+                e.preventDefault();
+                await dbOps.add('reminders', { title: document.getElementById('remTitle').value, time: document.getElementById('remTime').value });
+                document.getElementById('reminderForm').reset();
+                App.closeModal('reminder');
+                Swal.fire({ icon: 'success', title: 'یادآوری ذخیره شد', timer: 1500, showConfirmButton: false });
+            });
 
-        document.addEventListener('keydown', e => {
-            if (document.getElementById('lightboxOverlay').classList.contains('active')) {
-                if (e.key === 'Escape') App.closeLightbox();
-                if (e.key === 'ArrowLeft') App.navigateLightbox(-1);
-                if (e.key === 'ArrowRight') App.navigateLightbox(1);
+            document.getElementById('floatingNoteForm').addEventListener('submit', async e => {
+                e.preventDefault();
+                const cid = parseInt(document.getElementById('noteCardId').value);
+                const c = await dbOps.get('bankCards', cid);
+                if (c) {
+                    c.note = document.getElementById('noteText').value;
+                    await dbOps.put('bankCards', c);
+                }
+                App.closeModal('floatingNote');
+            });
+
+            document.querySelectorAll('.nav-btn,.bottom-nav button').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const v = btn.getAttribute('data-view');
+                    document.querySelectorAll('.view-section').forEach(s => s.classList.remove('active'));
+                    document.getElementById(v).classList.add('active');
+                    document.querySelectorAll('.nav-btn').forEach(n => n.classList.remove('active'));
+                    document.querySelectorAll('.bottom-nav button').forEach(n => n.classList.remove('active'));
+                    const navBtn = document.querySelector(`.nav-btn[data-view="${v}"]`);
+                    if (navBtn) navBtn.classList.add('active');
+                    btn.classList.add('active');
+                });
+            });
+
+            document.getElementById('propertySearch').addEventListener('input', App.renderProperties);
+            document.getElementById('requestSearch').addEventListener('input', App.renderRequests);
+            document.getElementById('archiveSearch').addEventListener('input', App.renderArchive);
+            document.getElementById('filterType').addEventListener('change', App.renderProperties);
+            document.getElementById('filterDeal').addEventListener('change', App.renderProperties);
+            document.getElementById('filterMinPrice').addEventListener('input', App.renderProperties);
+            document.getElementById('filterMaxPrice').addEventListener('input', App.renderProperties);
+
+            App.moneyFields.forEach(id => MoneyHelper.attach(id));
+
+            document.addEventListener('click', e => {
+                if (!e.target.closest('.status-menu-container')) document.querySelectorAll('.status-dropdown').forEach(d => d.style.display = 'none');
+            });
+
+            document.querySelectorAll('.modal-overlay').forEach(o => {
+                o.addEventListener('click', e => { if (e.target === o) o.classList.remove('active'); });
+            });
+
+            setInterval(() => {
+                const n = new Date();
+                document.getElementById('liveClock').textContent = String(n.getHours()).padStart(2, '0') + ':' + String(n.getMinutes()).padStart(2, '0');
+            }, 1000);
+
+            document.addEventListener('keydown', e => {
+                if (document.getElementById('lightboxOverlay').classList.contains('active')) {
+                    if (e.key === 'Escape') App.closeLightbox();
+                    if (e.key === 'ArrowLeft') App.navigateLightbox(-1);
+                    if (e.key === 'ArrowRight') App.navigateLightbox(1);
+                }
+            });
+
+            if (/iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream && !window.navigator.standalone) {
+                setTimeout(() => document.getElementById('iosPwaToast').classList.add('show'), 3000);
+                setTimeout(() => document.getElementById('iosPwaToast').classList.remove('show'), 15000);
             }
-        });
 
-        if (/iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream && !window.navigator.standalone) {
-            setTimeout(() => document.getElementById('iosPwaToast').classList.add('show'), 3000);
-            setTimeout(() => document.getElementById('iosPwaToast').classList.remove('show'), 15000);
+            console.log('✅ Filelinx v2.0 initialized successfully');
+        } catch (e) {
+            console.error('Initialization error:', e);
+            Swal.fire('خطای سیستمی', 'خطا در بارگذاری دیتابیس. لطفاً کش مرورگر را پاک کنید.', 'error');
         }
-
-        console.log('✅ Filelinx v2.0 initialized');
     }
 };
 
